@@ -138,8 +138,7 @@ body {
 
 .start-screen-wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 
@@ -189,9 +188,8 @@ body {
 
 .about-wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-items: center;
 }
 
@@ -238,8 +236,7 @@ body {
 
 .cards-flex-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
@@ -285,4 +282,85 @@ body {
 .btn-pets-rest {
   display: block;
   margin: 0 auto;
+}
+
+.help {
+  background-color: #ffffff;
+}
+
+.help-wrapper {
+  text-align: center;
+  padding: 0 87px;
+}
+
+.help .section-title {
+  margin-bottom: 60px;
+}
+
+.help-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.help-card {
+  height: 113px;
+  margin: 0 60px 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.help-card span {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.help-card {
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.help-card:first-child {
+  background-image: url(../../assets/icons/icon-pet-food.svg);
+  margin-left: 0;
+}
+
+.help-card:nth-child(2) {
+  background-image: url(../../assets/icons/icon-transportation.svg);
+}
+
+.help-card:nth-child(3) {
+  background-image: url(../../assets/icons/icon-toys.svg);
+  width: 60px;
+}
+
+.help-card:nth-child(4) {
+  background-image: url(../../assets/icons/icon-bowls-and-cups.svg);
+}
+
+.help-card:nth-child(5) {
+  background-image: url(../../assets/icons/icon-shampoos.svg);
+  margin-right: 0;
+}
+
+.help-card:nth-child(6) {
+  background-image: url(../../assets/icons/icon-vitamins.svg);
+  margin-left: 98px;
+}
+
+.help-card:nth-child(7) {
+  background-image: url(../../assets/icons/icon-medicines.svg);
+}
+
+.help-card:nth-child(8) {
+  background-image: url(../../assets/icons/icon-collars-leashes.svg);
+}
+
+.help-card:last-child {
+  background-image: url(../../assets/icons/icon-sleeping-area.svg);
+  margin-right: calc(171px - 87px);
 }
