@@ -34,8 +34,106 @@
   font-display: swap;
 }
 
+ul,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #4c4c4c;
+}
+
 body {
   font-family: "Georgia", sans-serif;
   font-size: 15px;
   line-height: 24px;
+  font-weight: 400;
+  color: #4c4c4c;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.header {
+  background-color: #262425;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 0 20px;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 60px;
+  margin-top: 60px;
+  align-items: center;
+  /*position: absolute;*/
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 186px;
+}
+
+.logo-title {
+  font-size: 32px;
+  line-height: 35.2px;
+  color: #f1cdb3;
+  letter-spacing: 0.06em;
+  font-weight: 400;
+}
+
+.logo-subtitle {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+}
+
+.main-nav {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 443px;
+  justify-content: space-between;
+}
+
+.nav-link {
+  color: #fafafa;
+  text-decoration: none;
+  font: inherit;
+}
+
+.start-screen {
+}
+.left-side {
+}
+.section-title {
+}
+.btn {
+}
+.img-container {
+}
+.start-screen-puppy {
 }
