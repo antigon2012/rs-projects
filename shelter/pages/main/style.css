@@ -75,6 +75,8 @@ body {
   padding: 0 20px;
 }
 
+/*header styles*/
+
 .header-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -123,6 +125,8 @@ body {
   text-decoration: none;
   font: inherit;
 }
+
+/*section start-page styles*/
 
 .section {
   padding-top: 80px;
@@ -182,6 +186,8 @@ body {
   height: 728px;
 }
 
+/*section-about styles*/
+
 .about {
   background-color: #ffffff;
 }
@@ -224,6 +230,14 @@ body {
   line-height: 160%;
 }
 
+.img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+/*section-pets styles*/
+
 .pets {
   background-color: #f6f6f6;
 }
@@ -256,6 +270,8 @@ body {
 .btn-right {
 }
 
+/*card styles*/
+
 .card {
   background-color: #fafafa;
   width: 270px;
@@ -283,6 +299,8 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+/*section-help style*/
 
 .help {
   background-color: #ffffff;
@@ -363,4 +381,166 @@ body {
 .help-card:last-child {
   background-image: url(../../assets/icons/icon-sleeping-area.svg);
   margin-right: calc(171px - 87px);
+}
+/*section-donation styles*/
+
+.donation {
+  background-color: #f6f6f6;
+}
+
+.donation-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.donation-dog {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.donation-dog img {
+  width: 505px;
+  height: 261px;
+}
+.donation-description {
+  width: 380px;
+}
+
+.donation-description > * {
+  margin-bottom: 20px;
+}
+
+.donation-description .section-title {
+  margin-right: 60px;
+}
+.donation-subtitle {
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.card-number {
+  background-color: #f1cdb3;
+  color: #292929;
+  border-radius: 9px;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  padding: 10px 10px 15px 60px;
+  position: relative;
+}
+
+.card-number::before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 23px;
+  background-image: url(../../assets/icons/credit-card.svg);
+  background-repeat: no-repeat;
+  left: 15px;
+  top: 10px;
+}
+
+.description {
+  font-family: "Arial";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #b2b2b2;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+/*footer styles*/
+
+.footer {
+  background: url(noise_lines_transparent@2X.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-column {
+  width: 300px;
+  height: 234px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.footer-subtitle {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.footer-info {
+  margin-left: 47px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.footer-info-link {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+}
+
+.footer-info::before {
+  content: "";
+  position: absolute;
+  width: 41px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  left: -55px;
+}
+
+.mail::before {
+  background-image: url(../../assets/icons/mail.svg);
+  top: -2px;
+}
+
+.tel::before {
+  background-image: url(../../assets/icons/phone.svg);
+}
+
+.map::before {
+  background-image: url(../../assets/icons/pin.svg);
+}
+
+.map::before {
+  background-image: url(../../assets/icons/pin.svg);
+}
+
+.footer-column p:first-child {
+  margin-bottom: 40px;
+}
+
+.footer-puppy {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.footer-puppy img {
+  width: 300px;
+  height: 310px;
 }
