@@ -7,29 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../main/normalize.css">
   <link rel="stylesheet" href="./styles.css">
-  <title>Document</title>
+  <title>Our pets</title>
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="container">
-      <header class="header">
-        <div class="header-logo">
-          <a class="logo-link">
-            <h1 class="logo-title">Cozy House</h1>
-            <h2 class="logo-subtitle">Shelter for pets in Boston</h2>
-          </a>
+    <header class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="header-logo">
+            <a class="logo-link" href="#">
+              <h1 class="logo-title">Cozy House</h1>
+            </a>
+            <a class="logo-link" href="#">
+              <h2 class="logo-subtitle">Shelter for pets in Boston</h2>
+            </a>
+          </div>
+          <nav class="main-nav">
+            <ul class="nav-list">
+              <li class="nav-item "><a href="../main/index.html" class="nav-link">About the shelter</a></li>
+              <li class="nav-item"><a href="../pets/index.html" class="nav-link nav-active">Our pets</a></li>
+              <li class="nav-item"><a href="#help" class="nav-link">Help the shelter</a></li>
+              <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+            </ul>
+          </nav>
         </div>
-        <nav class="main-nav">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="../main/index.html" class="nav-link">About the shelter</a></li>
-            <li class="nav-item"><a href="../pets/index.html" class="nav-link">Our pets</a></li>
-            <li class="nav-item"><a href="#help" class="nav-link">Help the shelter</a></li>
-            <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+      </div>
+    </header>
     <div class="container">
       <main class="main">
         <h2 class="section-title"></h2>
@@ -73,32 +77,48 @@
           <p class="name">Freddie</p>
           <button class="btn">Learn more</button>
         </div>
-        <div class="pag">
+        <div class="pag-container">
           <ul class="pag-list">
-            <li class="pag-item"><a href=""></a></li>
-            <li class="pag-item"><a href=""></a></li>
+            <li class="pag-item"><a href="">&laquo;&laquo;</a></li>
+            <li class="pag-item"><a href="">&laquo;</a></li>
             <li class="pag-item"><a href="">1</a></li>
-            <li class="pag-item"><a href=""></a></li>
-            <li class="pag-item"><a href=""></a></li>
+            <li class="pag-item"><a href="">&raquo;</a></li>
+            <li class="pag-item"><a href="">&raquo;&raquo;</a></li>
           </ul>
         </div>
       </main>
     </div>
-    <div class="container">
-      <footer class="footer" id="contacts">
-        <div class="footer-column">
-          <h3 class="footer-subtitle"></h3>
-          <p><a href="mailto:email@shelter.com">email@shelter.com</a></p>
-          <p><a href="tel:+13 674 567 75 54"></a>+13 674 567 75 54</p>
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-column">
+            <h3 class="footer-subtitle">For questions and suggestions</h3>
+            <div class="footer-info ">
+              <a href="mailto:email@shelter.com" class="footer-info-link mail">email@shelter.com</a>
+            </div>
+            <div class="footer-info">
+              <a href="tel:+136745677554" class="footer-info-link tel">+13 674 567 75 54</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-subtitle">We are waiting for your visit</h3>
+            <div class="footer-info">
+              <a href="https://goo.gl/maps/PxXzhiDyn5BdEV259" class="footer-info-link map" target="_blank">1
+                Central Street, Boston (entrance from the
+                store)</a>
+            </div>
+            <div class="footer-info">
+              <a href="https://goo.gl/maps/tUeeeEHVfHLYkmw99" class="footer-info-link map" target="_blank">18
+                South
+                Park, London</a>
+            </div>
+          </div>
+          <div class="footer-puppy">
+            <img src="../../assets/images/footer-puppy.png" alt="">
+          </div>
         </div>
-        <div class="footer-column">
-          <h3 class="footer-subtitle"></h3>
-          <p><a href="">1 Central Street, Boston (entrance from the store)</a></p>
-          <p><a href="">18 South Park, London</a></p>
-        </div>
-        <div class="footer-puppy"><img src="../../assets/images/footer-puppy.png" alt=""></div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </div>
   <script src="./script.js"></script>
 </body>
