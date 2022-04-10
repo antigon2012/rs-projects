@@ -25,7 +25,7 @@
           </div>
           <nav class="main-nav">
             <ul class="nav-list">
-              <li class="nav-item"><a href="../main/index.html" class="nav-link">About the shelter</a></li>
+              <li class="nav-item "><a href="../main/index.html" class="nav-link nav-active">About the shelter</a></li>
               <li class="nav-item"><a href="../pets/index.html" class="nav-link">Our pets</a></li>
               <li class="nav-item"><a href="#help" class="nav-link">Help the shelter</a></li>
               <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
@@ -89,7 +89,10 @@
               <h2 class="section-title">Our friends who <br>are looking for a house</h2>
             </div>
             <div class="cards-flex-container">
-              <!-- <button class="pets-btn-flip btn-left"></button> -->
+              <ul class="pag-list">
+                <li class="pag-item"><button class="pag-btn btn-left" aria-label="Влево"></button></li>
+                <li class="pag-item"><button class="pag-btn btn-right" aria-label="Вправо"></button></li>
+              </ul>
               <div class="card">
                 <img src="../../assets/images/pets-katrine.jpg" alt="Katrine" class="card-img">
                 <p class="name">Katrine</p>
@@ -105,11 +108,10 @@
                 <p class="name">Woody</p>
                 <button class="btn">Learn more</button>
               </div>
-              <!-- <button class="pets-btn-flip btn-right"></button> -->
             </div>
-            <button class="btn btn-pets-rest">
+            <a href="../pets/index.html" class="btn btn-pets-rest">
               Get to know the rest
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -157,15 +159,25 @@
         <div class="footer-wrapper">
           <div class="footer-column">
             <h3 class="footer-subtitle">For questions and suggestions</h3>
-            <p class="footer-info mail"><a href="mailto:email@shelter.com"
-                class="footer-info-link">email@shelter.com</a></p>
-            <p class="footer-info tel"><a href="tel:" class="footer-info-link">+13 674 567 75 54</a></p>
+            <div class="footer-info ">
+              <a href="mailto:email@shelter.com" class="footer-info-link mail">email@shelter.com</a>
+            </div>
+            <div class="footer-info">
+              <a href="tel:+136745677554" class="footer-info-link tel">+13 674 567 75 54</a>
+            </div>
           </div>
           <div class="footer-column">
             <h3 class="footer-subtitle">We are waiting for your visit</h3>
-            <p class="footer-info map"><a href="" class="footer-info-link">1 Central Street, Boston (entrance from the
-                store)</a></p>
-            <p class="footer-info map"><a href="" class="footer-info-link">18 South Park, London</a></p>
+            <div class="footer-info">
+              <a href="https://goo.gl/maps/PxXzhiDyn5BdEV259" class="footer-info-link map" target="_blank">1
+                Central Street, Boston (entrance from the
+                store)</a>
+            </div>
+            <div class="footer-info">
+              <a href="https://goo.gl/maps/tUeeeEHVfHLYkmw99" class="footer-info-link map" target="_blank">18
+                South
+                Park, London</a>
+            </div>
           </div>
           <div class="footer-puppy">
             <img src="../../assets/images/footer-puppy.png" alt="">
