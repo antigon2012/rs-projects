@@ -272,7 +272,7 @@ a {
   line-height: 19px;
 }
 
-.pag-link:hover:not(.off) {
+.pag-link:hover:not(.disabled) {
   border-color: #f1cdb3;
   background-color: #f1cdb3;
 }
