@@ -34,6 +34,15 @@
   font-display: swap;
 }
 
+body {
+  font-family: "Georgia", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #545454;
+}
+
 ul,
 p,
 h1,
@@ -47,15 +56,10 @@ h3 {
 a {
   text-decoration: none;
   color: #545454;
-}
-
-body {
-  font-family: "Georgia", sans-serif;
-  font-style: normal;
-  font-size: 15px;
-  line-height: 24px;
   font-weight: 400;
-  color: #545454;
+  font-size: 20px;
+  line-height: 115%;
+  color: #292929;
 }
 
 .wrapper {
@@ -126,8 +130,8 @@ body {
 }
 
 .nav-link {
+  font-family: "Arial", sans-serif;
   display: inline-block;
-  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -165,7 +169,7 @@ body {
 
 .main-title-container {
   width: 400px;
-  margin: 80px auto 80px;
+  margin: 80px auto 45px;
   text-align: center;
   margin-top: 80px;
 }
@@ -179,6 +183,7 @@ body {
 }
 
 .card-flex-container {
+  padding: 15px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -234,11 +239,48 @@ body {
   background: #fddcc4;
 }
 
+/*pagination*/
+
 .pag-container {
+  margin: 45px auto 100px;
+  max-width: 340px;
 }
+
 .pag-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .pag-item {
+  display: inline;
+  width: 52px;
+  height: 52px;
+}
+
+.pag-link {
+  display: block;
+  box-sizing: border-box;
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid #f1cdb3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 19px;
+}
+
+.pag-link:hover:not(.off) {
+  border-color: #f1cdb3;
+  background-color: #f1cdb3;
+}
+
+.disabled {
+  color: #cdcdcd;
+  border-color: #cdcdcd;
+  cursor: default;
 }
 
 /*footer styles*/
