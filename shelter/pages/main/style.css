@@ -64,11 +64,6 @@ body {
   min-height: 100%;
 }
 
-.header {
-  position: absolute;
-  width: 100%;
-}
-
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -76,6 +71,11 @@ body {
 }
 
 /*header styles*/
+
+.header {
+  position: absolute;
+  width: 100%;
+}
 
 .header-wrapper {
   display: flex;
