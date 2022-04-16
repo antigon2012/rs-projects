@@ -193,6 +193,7 @@ body {
 }
 
 .btn {
+  display: block;
   background-color: #f1cdb3;
   color: #292929;
   font-size: 17px;
@@ -315,6 +316,7 @@ body {
   background-color: #fddcc4;
   border: 2px solid #fddcc4;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .btn-left {
@@ -354,8 +356,14 @@ body {
   background-color: #ffffff;
 }
 
+.card .btn {
+  border: 2px solid #f1cdb3;
+  background-color: #fafafa;
+}
+
 .card:hover .btn {
   background-color: #fddcc4;
+  border-color: #fddcc4;
 }
 
 .card > * {
