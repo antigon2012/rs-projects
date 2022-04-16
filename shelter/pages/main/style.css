@@ -555,27 +555,27 @@ body {
   align-items: center;
 }
 
-.footer-column:first-child {
-  width: 282px;
-}
-
-.footer-column:first-child .footer-info {
-  padding-left: 60px;
-}
-
-.footer-column:nth-child(2) {
-  width: 302px;
-}
-
-.footer-column:nth-child(2) .footer-info {
-  padding-left: 40px;
-}
-
 .footer-column {
   height: 234px;
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-between;
+}
+.footer-column:first-child {
+  width: 282px;
+  gap: 45px;
+}
+
+.footer-column:first-child .footer-info {
+  padding-left: 63px;
+}
+
+.footer-column:nth-child(2) {
+  width: 302px;
+  gap: 32px;
+}
+
+.footer-column:nth-child(2) .footer-info {
+  padding-left: 39px;
 }
 
 .footer-subtitle {
@@ -618,24 +618,26 @@ body {
 
 .mail::before {
   background-image: url(../../assets/icons/mail.svg);
-  top: -5px;
-  left: 0px;
+  top: -3px;
+  left: 2px;
 }
 
 .tel::before {
   background-image: url(../../assets/icons/phone.svg);
-  top: -7px;
-  left: 0px;
+  top: -5px;
+  left: 3px;
 }
 
 .map::before {
   background-image: url(../../assets/icons/pin.svg);
-  left: -12px;
+  left: -13px;
+  top: 7px;
 }
 
 .map::before {
   background-image: url(../../assets/icons/pin.svg);
-  left: -12px;
+  left: -13px;
+  top: -5px;
 }
 
 .footer-puppy {
