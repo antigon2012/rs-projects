@@ -560,6 +560,7 @@ body {
   display: flex;
   flex-flow: column wrap;
 }
+
 .footer-column:first-child {
   width: 282px;
   gap: 45px;
@@ -628,13 +629,13 @@ body {
   left: 3px;
 }
 
-.map::before {
+.map-top::before {
   background-image: url(../../assets/icons/pin.svg);
   left: -13px;
   top: 7px;
 }
 
-.map::before {
+.map-bottom::before {
   background-image: url(../../assets/icons/pin.svg);
   left: -13px;
   top: -5px;
@@ -650,4 +651,121 @@ body {
 .footer-puppy img {
   width: 300px;
   height: 310px;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  /* header */
+
+  .header-wrapper {
+    margin-top: 30px;
+  }
+
+  /* start-screen */
+
+  .start-screen {
+    padding-top: 150px;
+  }
+
+  .start-screen-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+
+  .left-side {
+    margin-top: 0px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+
+  .left-side .btn {
+    margin: 0 auto;
+  }
+
+  .start-screen-puppy {
+    width: 569px;
+    height: 593px;
+    margin-left: calc(100% - 569px);
+  }
+
+  /* about */
+
+  .about-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .about-right {
+    margin-bottom: 80px;
+  }
+
+  .about-left {
+    margin: 0 auto;
+  }
+
+  /* cards */
+
+  .cards-flex-container {
+    padding: 0 calc(100% - 644px);
+  }
+
+  .card:last-child {
+    display: none;
+  }
+
+  .btn-left {
+    left: -64px;
+  }
+
+  .btn-right {
+    left: 592px;
+  }
+
+  /* help */
+
+  .help-wrapper {
+    padding: 0 39px;
+  }
+
+  .help-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 170px);
+    gap: 55px 60px;
+  }
+
+  .help-card:nth-child(3) {
+    margin: 0 auto;
+    width: 120px;
+  }
+
+  /* donation */
+
+  .donation-wrapper {
+    padding: 0;
+    flex-flow: column-reverse wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .donation-description {
+    margin-bottom: 60px;
+  }
+
+  /* footer */
+
+  .footer-wrapper {
+    padding-top: 31px;
+  }
+
+  .footer-column {
+    margin: 0 auto;
+    margin-bottom: 26px;
+  }
+
+  .footer-puppy {
+    margin: 0 auto;
+  }
 }
