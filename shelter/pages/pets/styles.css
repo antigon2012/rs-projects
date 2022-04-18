@@ -384,13 +384,13 @@ a {
   left: 3px;
 }
 
-.map::before {
+.map-top::before {
   background-image: url(../../assets/icons/pin.svg);
   left: -13px;
   top: 7px;
 }
 
-.map::before {
+.map-bottom::before {
   background-image: url(../../assets/icons/pin.svg);
   left: -13px;
   top: -5px;
@@ -408,5 +408,50 @@ a {
   height: 310px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279.5px) {
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  /* header */
+
+  .header-wrapper {
+    margin-top: 30px;
+  }
+
+  /* card-flex-container */
+
+  .main-title-container {
+    margin-bottom: 30px;
+  }
+
+  .card-flex-container {
+    padding: 0 64px 0;
+    gap: 30px 40px;
+  }
+
+  .pag-container {
+    margin: 40px auto 75px;
+    max-width: 340px;
+  }
+
+  .card:nth-child(7),
+  .card:last-child {
+    display: none;
+  }
+
+  /* footer */
+
+  .footer-wrapper {
+    padding-top: 31px;
+  }
+
+  .footer-column {
+    margin: 0 auto;
+    margin-bottom: 26px;
+  }
+
+  .footer-puppy {
+    margin: 0 auto;
+  }
 }
