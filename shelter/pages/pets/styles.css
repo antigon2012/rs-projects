@@ -568,6 +568,7 @@ a {
 
   .footer-subtitle {
     font-size: 25px;
+    max-width: 270px;
   }
 
   .footer-puppy {

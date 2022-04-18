@@ -428,7 +428,7 @@ body {
 
 .help-card:nth-child(3) {
   background-image: url(../../assets/icons/icon-toys.svg);
-  width: 130px;
+  width: 60px;
 }
 
 .help-card:nth-child(4) {
@@ -759,6 +759,8 @@ body {
 
   .footer-wrapper {
     padding-top: 31px;
+    max-width: 708px;
+    margin: 0 auto;
   }
 
   .footer-column {
@@ -962,6 +964,10 @@ body {
     background-size: 50px 50px;
   }
 
+  .help-card:nth-child(3) {
+    width: 130px;
+  }
+
   .help-card span {
     font-size: 15px;
     line-height: 110%;
@@ -1039,6 +1045,7 @@ body {
 
   .footer-subtitle {
     font-size: 25px;
+    max-width: 270px;
   }
 
   .footer-puppy {
