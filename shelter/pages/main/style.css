@@ -791,6 +791,46 @@ body {
     margin-top: 30px;
   }
 
+  /* burger */
+
+  .menu-burger-header {
+    position: absolute;
+    width: 30px;
+    height: 22px;
+    display: block;
+    margin-left: 10px;
+    left: 227px;
+    top: 49px;
+    cursor: pointer;
+  }
+
+  .menu-burger-header span,
+  .menu-burger-header:after,
+  .menu-burger-header:before {
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background: #f1cdb3;
+    margin: 0 auto;
+  }
+
+  .menu-burger-header span {
+    top: 20px;
+  }
+
+  .menu-burger-header:after,
+  .menu-burger-header:before {
+    content: "";
+  }
+
+  .menu-burger-header:after {
+    bottom: 10px;
+  }
+
+  .menu-burger-header:before {
+    top: 0;
+  }
+
   /* about */
 
   .start-screen {
