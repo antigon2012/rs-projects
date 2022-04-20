@@ -707,6 +707,7 @@ body {
   .cards-flex-container {
     min-width: 708px;
     margin: 0 auto;
+    margin-bottom: 60px;
   }
 
   .carousel {

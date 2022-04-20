@@ -485,10 +485,10 @@ a {
     width: 30px;
     height: 22px;
     display: block;
-    margin-left: 10px;
-    left: 227px;
     top: 49px;
     cursor: pointer;
+    right: 53px;
+    top: 48px;
   }
 
   .menu-burger-header span,
