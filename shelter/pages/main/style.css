@@ -965,6 +965,11 @@ body {
     z-index: 0;
     height: 100vh;
     width: 100vw;
+    overflow: auto;
+  }
+
+  .noscroll {
+    overflow: hidden;
   }
 
   /* .wrapper.active {

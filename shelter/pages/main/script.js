@@ -1,4 +1,5 @@
 const MENU_BTN = document.querySelector(".menu-burger-header");
+const BODY = document.body;
 const MAIN_NAV = document.querySelector(".main-nav");
 const HEADER_LOGO = document.querySelector(".header-logo");
 const FADE_LAYER = document.querySelector(".mobile-menu-wrap");
@@ -10,6 +11,7 @@ function openMenu() {
   MENU_BTN.classList.toggle("active");
   MAIN_NAV.classList.toggle("active");
   HEADER_LOGO.classList.toggle("open");
+  BODY.classList.toggle("noscroll");
   // MAIN_WRAPPER.classList.toggle("active");
 }
 
@@ -18,6 +20,7 @@ function closeMenu() {
   MENU_BTN.classList.remove("active");
   MAIN_NAV.classList.remove("active");
   HEADER_LOGO.classList.remove("open");
+  BODY.classList.remove("noscroll");
   // MAIN_WRAPPER.classList.remove("active");
 }
 
