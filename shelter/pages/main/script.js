@@ -3,7 +3,7 @@ const BODY = document.body;
 const MAIN_NAV = document.querySelector(".main-nav");
 const HEADER_LOGO = document.querySelector(".header-logo");
 const FADE_LAYER = document.querySelector(".mobile-menu-wrap");
-const MAIN_WRAPPER = document.querySelector(".wrapper");
+// const MAIN_NAV = document.querySelector(".main-nav");
 const NAV_ITEM = document.querySelectorAll(".nav-item");
 
 function openMenu() {
@@ -33,4 +33,4 @@ for (let i = 0; i < NAV_ITEM.length; i++) {
 }
 
 FADE_LAYER.addEventListener("click", closeMenu);
-// NAV_LIST.addEventListener("click", (e) => e.stopPropagation());
+MAIN_NAV.addEventListener("click", (e) => e.stopPropagation());
