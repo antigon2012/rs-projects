@@ -7,11 +7,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/styles/dist/normalize.css">
   <link rel="stylesheet" href="./src/styles/dist/style.css">
-  <title>Document</title>
+  <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon">
+  <title>Travel Portal</title>
 </head>
 
 <body>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <img src="./assets/svg/logo.svg" alt="main-logo" class="logo__svg">
+          <h1 class="logo_text">Travel Portal</h1>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="plan" class="header__nav-link">How It Works</a></li>
+            <li class="header__nav-item"><a href="" class="header__nav-link">Plan Your Trip</a></li>
+            <li class="header__nav-item"><a href="" class="header__nav-link">Destinations</a></li>
+            <li class="header__nav-item"><a href="" class="header__nav-link">Travel Stories</a></li>
+          </ul>
+        </nav>
+        <button class="button">Login</button>
+      </div>
+    </div>
+  </header>
 
+  <main class="main">
+    <div class="container">
+      <section class="plan" id="#plan">
+        <div class="plan__wrapper">
+          <h3 class="section__title plan__title">Explore the beauty of the World</h3>
+          <div class="plan__description">Receive personalized recommendations for countries, hotels, activities and more
+          </div>
+          <form action="#" class="plan__form">
+            <input type="text" name="" id="" class="plan__input" placeholder="What would you like to do?">
+            <button class="button plan__button">Start Planning</button>
+          </form>
+        </div>
+      </section>
+      <section class="steps">
+        <h3 class="section__title steps__title">3 STEPS TO THE PERFECT TRIP</h3>
+        <div class="steps__card">
+          <p class="steps__descr">Tell us what you want to do</p>
+        </div>
+        <div class="steps__card">
+          <p class="steps__descr">Share us preferable dates</p>
+        </div>
+        <div class="steps__card">
+          <p class="steps__descr">We will give you recommendations</p>
+        </div>
+      </section>
+      <section class="destinations">
+        <h3 class="section__title destinations__title"></h3>
+        <div class="slider__wrapper">
+          <div class="slider__line">
+            <img src="./assets/img/slider-firstImg-desktop.jpg" alt="Spain" class="slider__item">
+            <img src="./assets/img/slider_secondImg_desktop.jpg" alt="Japan" class="slider__item">
+            <img src="./assets/img/slider-thirdImg-desctop.jpg" alt="USA " class="slider__item">
+          </div>
+        </div>
+        <div class="slider-bread">
+          <span class="slider-bread__item"></span>
+          <span class="slider-bread__item"></span>
+          <span class="slider-bread__item"></span>
+        </div>
+        <button class="button destinations__button">Find More</button>
+      </section>
+      <section class="stories">
+        <h3 class="section__title stories__title">Travel Stories</h3>
+        <div class="stories__block-artical">
+          <artical class="block-articals__artical-item">
+            <img src="" alt="" class="artical__cover">
+            <h4 class="artical__title">10 Photos of Attractive Thailand</h4>
+            <p class="artical__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt
+              dignissimos quae, fugiat ipsam nam atque tempore ex fuga, aliquam facilis, at corrupti hic enim quo iusto
+              provident aliquid dolorum.Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+            <a href="" class="artical__link">Read More</a>
+          </artical>
+          <artical class="block-articals__artical-item">
+            <img src="" alt="" class="artical__cover">
+            <h4 class="artical__title">Canyonlands National Park, Utah</h4>
+            <p class="artical__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum rerum odit officia
+              impedit unde consectetur autem vitae neque dolor. Iure facere laborum deleniti et itaque hic vero
+              aspernatur, omnis eos?Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+            <a href="" class="artical__link">Read More</a>
+          </artical>
+          <artical class="block-articals__artical-item">
+            <img src="" alt="" class="artical__cover">
+            <h4 class="artical__title">I left my heart in the Mountains!</h4>
+            <p class="artical__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea alias nostrum, quos
+              ratione sunt eligendi ad hic deleniti voluptatum optio aspernatur exercitationem iusto, minima dolores,
+              beatae suscipit voluptatem reiciendis consequatur?Lorem ipsum dolor sit amet consectetur, adipisicing elit
+            </p>
+            <a href="" class="artical__link">Read More</a>
+          </artical>
+          <artical class="block-articals__artical-item">
+            <img src="" alt="" class="artical__cover">
+            <h4 class="artical__title">The Longest journey in my life!</h4>
+            <p class="artical__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt harum, deserunt
+              ducimus iusto, distinctio porro perferendis eum ipsa tempora obcaecati possimus magni suscipit unde enim
+              ex praesentium temporibus saepe vitae.Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+            <a href="" class="artical__link">Read More </a>
+          </artical>
+        </div>
+        <button class="button stories__button">See More</button>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__section footer__copyright">
+      <span>All Rights Reserved</span>
+      <span>©</span>
+      <span>Travel Portal</span>
+    </div>
+    <div class="footer__section footer__social">
+      <ul class="footer__social-list">
+        <li class="social-list__item"><a href="./assets/svg/inst_social.svg" class="social-list__link"></a></li>
+        <li class="social-list__item"><a href="./assets/svg/youtube_social.svg" class="social-list__link"></a></li>
+        <li class="social-list__ item"><a href="./assets/svg/twitter_social.svg" class="social-list__link"></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="./src/js/index.js" type="module"></script>
 </body>
 
 </html>
