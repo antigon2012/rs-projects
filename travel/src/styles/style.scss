@@ -94,7 +94,7 @@ body {
 .plan__wrapper {
   max-width: 892px;
   margin-top: 32px;
-  margin-bottom: 255px;
+  margin-bottom: 254px;
 }
 .section__title {
 }
@@ -147,7 +147,56 @@ body {
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
-  // width: 228px;
-  // height: 59px;
   padding: 13.5px 35px;
+}
+.steps {
+  background-color: #fff;
+  padding-top: 80px;
+  > .container {
+    padding-inline: 26px;
+  }
+}
+.section__title {
+  font-family: $ff_RH;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 53px;
+  color: #f2785c;
+  text-align: center;
+}
+.steps__title {
+  margin-bottom: 40px;
+}
+.steps__cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+.steps__card {
+  min-height: 154px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.steps__card:nth-child(2) {
+  position: relative;
+  left: 35px;
+}
+.steps__card:first-child {
+  background-image: url(../../../assets/icon/cycle_icon.png);
+}
+.steps__card:nth-child(2) {
+  background-image: url(../../../assets/icon/calendar_icon.png);
+}
+.steps__card:last-child {
+  background-image: url(../../../assets/icon/flight_icon.png);
+}
+
+.steps__descr {
+  font-family: $ff_AO;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0d606f;
 }
