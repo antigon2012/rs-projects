@@ -3,7 +3,7 @@
   font-family: "Red Hat Text";
   font-style: normal;
   font-weight: 500;
-  src: local(""), url("../../../assets/fonts/red-hat-text-v11-latin-500.woff2") format("woff2"), url("../../../assets/fonts/red-hat-text-v11-latin-500.woff") format("woff");
+  src: local(""), url("../../assets/fonts/red-hat-text-v11-latin-500.woff2") format("woff2"), url("../../assets/fonts/red-hat-text-v11-latin-500.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* red-hat-text-regular - latin */
@@ -11,7 +11,7 @@
   font-family: "Red Hat Text";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("../../../assets/fonts/red-hat-text-v11-latin-regular.woff2") format("woff2"), url("../../../assets/fonts/red-hat-text-v11-latin-regular.woff") format("woff");
+  src: local(""), url("../../assets/fonts/red-hat-text-v11-latin-regular.woff2") format("woff2"), url("../../assets/fonts/red-hat-text-v11-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-regular - latin */
@@ -19,7 +19,7 @@
   font-family: "Aleo";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("../../../assets/fonts/aleo-v11-latin-regular.woff2") format("woff2"), url("../../../assets/fonts/aleo-v11-latin-regular.woff") format("woff");
+  src: local(""), url("../../assets/fonts/aleo-v11-latin-regular.woff2") format("woff2"), url("../../assets/fonts/aleo-v11-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-italic - latin */
@@ -27,7 +27,7 @@
   font-family: "Aleo";
   font-style: italic;
   font-weight: 400;
-  src: local(""), url("../../../assets/fonts/aleo-v11-latin-italic.woff2") format("woff2"), url("../../../assets/fonts/aleo-v11-latin-italic.woff") format("woff");
+  src: local(""), url("../../assets/fonts/aleo-v11-latin-italic.woff2") format("woff2"), url("../../assets/fonts/aleo-v11-latin-italic.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-700 - latin */
@@ -35,7 +35,7 @@
   font-family: "Aleo";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("../../../assets/fonts/aleo-v11-latin-700.woff2") format("woff2"), url("../../../assets/fonts/aleo-v11-latin-700.woff") format("woff");
+  src: local(""), url("../../assets/fonts/aleo-v11-latin-700.woff2") format("woff2"), url("../../assets/fonts/aleo-v11-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-700italic - latin */
@@ -43,7 +43,7 @@
   font-family: "Aleo";
   font-style: italic;
   font-weight: 700;
-  src: local(""), url("../../../assets/fonts/aleo-v11-latin-700italic.woff2") format("woff2"), url("../../../assets/fonts/aleo-v11-latin-700italic.woff") format("woff");
+  src: local(""), url("../../assets/fonts/aleo-v11-latin-700italic.woff2") format("woff2"), url("../../assets/fonts/aleo-v11-latin-700italic.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* magra-700 - latin */
@@ -51,7 +51,7 @@
   font-family: "Magra";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("../../../assets/fonts/Magra-Bold.woff2") format("woff2"), url("../../../assets/fonts/Magra-Bold.woff") format("woff");
+  src: local(""), url("../../assets/fonts/Magra-Bold.woff2") format("woff2"), url("../../assets/fonts/Magra-Bold.woff") format("woff");
 }
 * {
   padding: 0;
@@ -103,7 +103,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  background-image: url(../../../assets/img/main-cover-desktop.jpg), url(../../../assets/img/footer-cover-desktop.jpg);
+  background-image: url(../../assets/img/main-cover-desktop.jpg), url(../../assets/img/footer-cover-desktop.jpg);
   background-position: top center, bottom center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -301,13 +301,13 @@ body {
   left: 35px;
 }
 .steps__card:first-child {
-  background-image: url(../../../assets/icon/cycle_icon.png);
+  background-image: url(../../assets/icon/cycle_icon.png);
 }
 .steps__card:nth-child(2) {
-  background-image: url(../../../assets/icon/calendar_icon.png);
+  background-image: url(../../assets/icon/calendar_icon.png);
 }
 .steps__card:last-child {
-  background-image: url(../../../assets/icon/flight_icon.png);
+  background-image: url(../../assets/icon/flight_icon.png);
 }
 
 .steps__descr {
@@ -396,7 +396,7 @@ body {
   display: block;
   padding: 13.5px 31px 13.5px 81px;
   margin: 0 auto;
-  background-image: url(../../../assets/svg/arrow.svg);
+  background-image: url(../../assets/svg/arrow.svg);
   background-position-x: 34px;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -470,7 +470,7 @@ body {
   display: block;
   padding: 13.5px 30px 13.5px 81px;
   margin: 0 auto;
-  background-image: url(../../../assets/svg/arrow.svg);
+  background-image: url(../../assets/svg/arrow.svg);
   background-position-x: 34px;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -514,13 +514,13 @@ body {
   transition: all ease 0.2s;
 }
 .social-list__item:first-child {
-  background-image: url(../../../assets/svg/inst_social.svg);
+  background-image: url(../../assets/svg/inst_social.svg);
 }
 .social-list__item:nth-child(2) {
-  background-image: url(../../../assets/svg/youtube_social.svg);
+  background-image: url(../../assets/svg/youtube_social.svg);
 }
 .social-list__item:last-child {
-  background-image: url(../../../assets/svg/twitter_social.svg);
+  background-image: url(../../assets/svg/twitter_social.svg);
 }
 .social-list__item:hover {
   transform: scale(1.15, 1.15);

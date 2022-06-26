@@ -4,11 +4,9 @@
   font-style: normal;
   font-weight: 500;
   src: local(""),
-    url("../../../assets/fonts/red-hat-text-v11-latin-500.woff2")
-      format("woff2"),
+    url("../../assets/fonts/red-hat-text-v11-latin-500.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../../../assets/fonts/red-hat-text-v11-latin-500.woff")
-      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("../../assets/fonts/red-hat-text-v11-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* red-hat-text-regular - latin */
 @font-face {
@@ -16,10 +14,10 @@
   font-style: normal;
   font-weight: 400;
   src: local(""),
-    url("../../../assets/fonts/red-hat-text-v11-latin-regular.woff2")
+    url("../../assets/fonts/red-hat-text-v11-latin-regular.woff2")
       format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../../../assets/fonts/red-hat-text-v11-latin-regular.woff")
+      url("../../assets/fonts/red-hat-text-v11-latin-regular.woff")
       format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-regular - latin */
@@ -28,9 +26,9 @@
   font-style: normal;
   font-weight: 400;
   src: local(""),
-    url("../../../assets/fonts/aleo-v11-latin-regular.woff2") format("woff2"),
+    url("../../assets/fonts/aleo-v11-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../../../assets/fonts/aleo-v11-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("../../assets/fonts/aleo-v11-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-italic - latin */
 @font-face {
@@ -38,9 +36,9 @@
   font-style: italic;
   font-weight: 400;
   src: local(""),
-    url("../../../assets/fonts/aleo-v11-latin-italic.woff2") format("woff2"),
+    url("../../assets/fonts/aleo-v11-latin-italic.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../../../assets/fonts/aleo-v11-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("../../assets/fonts/aleo-v11-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-700 - latin */
 @font-face {
@@ -48,9 +46,9 @@
   font-style: normal;
   font-weight: 700;
   src: local(""),
-    url("../../../assets/fonts/aleo-v11-latin-700.woff2") format("woff2"),
+    url("../../assets/fonts/aleo-v11-latin-700.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../../../assets/fonts/aleo-v11-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("../../assets/fonts/aleo-v11-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-700italic - latin */
 @font-face {
@@ -58,15 +56,15 @@
   font-style: italic;
   font-weight: 700;
   src: local(""),
-    url("../../../assets/fonts/aleo-v11-latin-700italic.woff2") format("woff2"),
+    url("../../assets/fonts/aleo-v11-latin-700italic.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../../../assets/fonts/aleo-v11-latin-700italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("../../assets/fonts/aleo-v11-latin-700italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* magra-700 - latin */
 @font-face {
   font-family: "Magra";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("../../../assets/fonts/Magra-Bold.woff2") format("woff2"),
-    url("../../../assets/fonts/Magra-Bold.woff") format("woff");
+  src: local(""), url("../../assets/fonts/Magra-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/Magra-Bold.woff") format("woff");
 }
