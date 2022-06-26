@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/styles/dist/normalize.css">
-  <link rel="stylesheet" href="./src/styles/dist/style.css">
+  <link rel="stylesheet" href="./src/styles/normalize.css">
+  <link rel="stylesheet" href="./src/styles/style.css">
   <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon">
   <title>Travel Portal</title>
 </head>
@@ -22,7 +22,7 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item"><a href="#steps" class="header__nav-link">How It Works</a></li>
-            <li class="header__nav-item"><a href="#plane" class="header__nav-link"><label for="#plan">Plan Your
+            <li class="header__nav-item"><a href="#plane" class="header__nav-link"><label for="#preview">Plan Your
                   Trip</label></a></li>
             <li class="header__nav-item"><a href="#destinations" class="header__nav-link">Destinations</a></li>
             <li class="header__nav-item"><a href="#stories" class="header__nav-link">Travel Stories</a></li>
@@ -34,22 +34,24 @@
   </header>
 
   <main class="main">
-    <section class="plan">
+    <section class="preview">
       <div class="container">
-        <div class="plan__wrapper">
-          <h3 class="plan__title">Explore the beauty of the World</h3>
-          <div class="plan__description">Receive personalized recommendations for countries, hotels, activities and more
+        <div class="preview__wrapper">
+          <h2 class="preview__title">Explore the beauty of the World</h2>
+          <div class="preview__description">Receive personalized recommendations for countries, hotels, activities and
+            more
           </div>
-          <form action="#" class="plan__form">
-            <input type="text" name="plan" id="#plan" class="plan__input" placeholder="What would you like to do?">
-            <button class="button plan__button">Start Planning</button>
+          <form action="#" class="preview__form">
+            <input type="text" name="preview" id="#preview" class="preview__input"
+              placeholder="What would you like to do?">
+            <button class="button preview__button">Start Planning</button>
           </form>
         </div>
       </div>
     </section>
     <section class="steps" id="steps">
       <div class="container">
-        <h3 class="section__title steps__title">3 STEPS TO THE PERFECT TRIP</h3>
+        <h2 class="section__title steps__title">3 STEPS TO THE PERFECT TRIP</h2>
         <div class="steps__cards-container">
           <div class="steps__card">
             <p class="steps__descr">Tell us what you want to do</p>
@@ -65,7 +67,7 @@
     </section>
     <section class="destinations" id="destinations">
       <div class="container">
-        <h3 class="section__title destinations__title">POPULAR DESTINATIONS</h3>
+        <h2 class="section__title destinations__title">POPULAR DESTINATIONS</h2>
         <div class="slider__wrapper">
           <ul class="slider__line">
             <li class="slider__item">
@@ -91,13 +93,13 @@
       </div>
     </section>
     <section class="stories" id="stories">
-      <h3 class="section__title stories__title">Travel Stories</h3>
+      <h2 class="section__title stories__title">Travel Stories</h2>
       <div class="container">
         <div class="stories__block-artical">
           <artical class="block-artical__artical-item">
             <img src="./assets/img/Rectangle29.jpg" alt="" class="artical__cover">
             <div class="artical__text-container">
-              <h4 class="artical__title">10 Photos of Attractive Thailand</h4>
+              <h3 class="artical__title">10 Photos of Attractive Thailand</h3>
               <p class="artical__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -116,7 +118,7 @@
           <artical class="block-artical__artical-item">
             <img src="./assets/img/Rectangle30.jpg" alt="" class="artical__cover">
             <div class="artical__text-container">
-              <h4 class="artical__title">Canyonlands National Park, Utah</h4>
+              <h3 class="artical__title">Canyonlands National Park, Utah</h3>
               <p class="artical__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -135,7 +137,7 @@
           <artical class="block-artical__artical-item">
             <img src="./assets/img/Rectangle31.jpg" alt="" class="artical__cover">
             <div class="artical__text-container">
-              <h4 class="artical__title">I left my heart in the Mountains!</h4>
+              <h3 class="artical__title">I left my heart in the Mountains!</h3>
               <p class="artical__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -155,7 +157,7 @@
           <artical class="block-artical__artical-item">
             <img src="./assets/img/Rectangle32.jpg" alt="" class="artical__cover">
             <div class="artical__text-container">
-              <h4 class="artical__title">The Longest journey in my life!</h4>
+              <h3 class="artical__title">The Longest journey in my life!</h3>
               <p class="artical__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -186,9 +188,13 @@
       </div>
       <div class="footer__section footer__social">
         <ul class="footer__social-list">
-          <li class="social-list__item"><a href="./assets/svg/inst_social.svg" class="social-list__link"></a></li>
-          <li class="social-list__item"><a href="./assets/svg/youtube_social.svg" class="social-list__link"></a></li>
-          <li class="social-list__item"><a href="./assets/svg/twitter_social.svg" class="social-list__link"></a></li>
+          <li class="social-list__item"><a href="https://github.com/antigon2012" class="social-list__link"
+              title="GitHub">
+            </a></li>
+          <li class="social-list__item"><a href="#" class="social-list__link">
+            </a></li>
+          <li class="social-list__item"><a href="https://rs.school/js-stage0/" class="social-list__link"
+              title="RsSchool"></a></li>
         </ul>
       </div>
     </div>

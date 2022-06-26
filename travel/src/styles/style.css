@@ -3,10 +3,7 @@
   font-family: "Red Hat Text";
   font-style: normal;
   font-weight: 500;
-  src: local(""),
-    url("../../../assets/fonts/red-hat-text-v11-latin-500.woff2")
-      format("woff2"),
-    url("../../../assets/fonts/red-hat-text-v11-latin-500.woff") format("woff");
+  src: local(""), url("../../../assets/fonts/red-hat-text-v11-latin-500.woff2") format("woff2"), url("../../../assets/fonts/red-hat-text-v11-latin-500.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* red-hat-text-regular - latin */
@@ -14,11 +11,7 @@
   font-family: "Red Hat Text";
   font-style: normal;
   font-weight: 400;
-  src: local(""),
-    url("../../../assets/fonts/red-hat-text-v11-latin-regular.woff2")
-      format("woff2"),
-    url("../../../assets/fonts/red-hat-text-v11-latin-regular.woff")
-      format("woff");
+  src: local(""), url("../../../assets/fonts/red-hat-text-v11-latin-regular.woff2") format("woff2"), url("../../../assets/fonts/red-hat-text-v11-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-regular - latin */
@@ -26,9 +19,7 @@
   font-family: "Aleo";
   font-style: normal;
   font-weight: 400;
-  src: local(""),
-    url("../../../assets/fonts/aleo-v11-latin-regular.woff2") format("woff2"),
-    url("../../../assets/fonts/aleo-v11-latin-regular.woff") format("woff");
+  src: local(""), url("../../../assets/fonts/aleo-v11-latin-regular.woff2") format("woff2"), url("../../../assets/fonts/aleo-v11-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-italic - latin */
@@ -36,9 +27,7 @@
   font-family: "Aleo";
   font-style: italic;
   font-weight: 400;
-  src: local(""),
-    url("../../../assets/fonts/aleo-v11-latin-italic.woff2") format("woff2"),
-    url("../../../assets/fonts/aleo-v11-latin-italic.woff") format("woff");
+  src: local(""), url("../../../assets/fonts/aleo-v11-latin-italic.woff2") format("woff2"), url("../../../assets/fonts/aleo-v11-latin-italic.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-700 - latin */
@@ -46,9 +35,7 @@
   font-family: "Aleo";
   font-style: normal;
   font-weight: 700;
-  src: local(""),
-    url("../../../assets/fonts/aleo-v11-latin-700.woff2") format("woff2"),
-    url("../../../assets/fonts/aleo-v11-latin-700.woff") format("woff");
+  src: local(""), url("../../../assets/fonts/aleo-v11-latin-700.woff2") format("woff2"), url("../../../assets/fonts/aleo-v11-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* aleo-700italic - latin */
@@ -56,9 +43,7 @@
   font-family: "Aleo";
   font-style: italic;
   font-weight: 700;
-  src: local(""),
-    url("../../../assets/fonts/aleo-v11-latin-700italic.woff2") format("woff2"),
-    url("../../../assets/fonts/aleo-v11-latin-700italic.woff") format("woff");
+  src: local(""), url("../../../assets/fonts/aleo-v11-latin-700italic.woff2") format("woff2"), url("../../../assets/fonts/aleo-v11-latin-700italic.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* magra-700 - latin */
@@ -66,8 +51,7 @@
   font-family: "Magra";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("../../../assets/fonts/Magra-Bold.woff2") format("woff2"),
-    url("../../../assets/fonts/Magra-Bold.woff") format("woff");
+  src: local(""), url("../../../assets/fonts/Magra-Bold.woff2") format("woff2"), url("../../../assets/fonts/Magra-Bold.woff") format("woff");
 }
 * {
   padding: 0;
@@ -119,8 +103,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  background-image: url(../../../assets/img/main-cover-desktop.jpg),
-    url(../../../assets/img/footer-cover-desktop.jpg);
+  background-image: url(../../../assets/img/main-cover-desktop.jpg), url(../../../assets/img/footer-cover-desktop.jpg);
   background-position: top center, bottom center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -179,6 +162,12 @@ body {
   font-size: 16px;
   color: #fff;
   line-height: 21px;
+  transition: all ease 0.3s;
+}
+.header__nav-link:hover {
+  color: #97665b;
+  transition: all ease 0.3s;
+  text-decoration: underline;
 }
 
 .header__nav-link:last-child {
@@ -193,10 +182,13 @@ body {
   color: #fff;
   line-height: 21px;
   background-color: #0d606f;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
-    0px 2px 3px rgba(13, 96, 111, 0.16);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
   border: none;
+  transition: all ease 0.3s;
+}
+.button:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .header__button {
@@ -204,13 +196,13 @@ body {
   margin-bottom: 24px;
 }
 
-.plan__wrapper {
+.preview__wrapper {
   max-width: 892px;
   margin-top: 32px;
   margin-bottom: 254px;
 }
 
-.plan__title {
+.preview__title {
   font-family: "Aleo", sans-serif;
   font-weight: 700;
   font-size: 80px;
@@ -219,7 +211,7 @@ body {
   margin-bottom: 32px;
 }
 
-.plan__description {
+.preview__description {
   font-family: "Aleo", sans-serif;
   font-style: italic;
   font-weight: 700;
@@ -229,7 +221,7 @@ body {
   margin-bottom: 46px;
 }
 
-.plan__form {
+.preview__form {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
@@ -239,7 +231,7 @@ body {
   justify-content: space-between;
 }
 
-.plan__input {
+.preview__input {
   font-family: "Aleo", sans-serif;
   font-style: italic;
   font-weight: 400;
@@ -248,19 +240,19 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   border: 0;
   background-color: transparent;
-  min-width: 280px;
+  width: auto;
   outline: 0;
   color: #f2785c;
 }
-.plan__input:focus {
+.preview__input:focus {
   box-shadow: 0 0 0 3px #f2785c;
   border-radius: 10px;
 }
-.plan__input::placeholder {
+.preview__input::placeholder {
   color: #f2785c;
 }
 
-.plan__button {
+.preview__button {
   font-family: "Red Hat Text", sans-serif;
   font-weight: 500;
   font-size: 24px;
@@ -388,9 +380,13 @@ body {
   border-radius: 50%;
   background-color: #f2785c;
   opacity: 0.5;
+  cursor: pointer;
 }
 .slider-bread__item:nth-child(2) {
   opacity: 1;
+}
+.slider-bread__item:hover {
+  transform: scale(1.15, 1.15);
 }
 
 .destinations__button {
@@ -461,6 +457,10 @@ body {
   color: #0d606f;
   text-decoration: underline;
   font-weight: 600;
+  transition: all ease 0.3s;
+}
+.artical__link:hover {
+  opacity: 0.7;
 }
 
 .stories__button {
@@ -507,8 +507,11 @@ body {
 }
 
 .social-list__item {
+  fill: #fff;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: 100%;
+  transition: all ease 0.2s;
 }
 .social-list__item:first-child {
   background-image: url(../../../assets/svg/inst_social.svg);
@@ -518,6 +521,9 @@ body {
 }
 .social-list__item:last-child {
   background-image: url(../../../assets/svg/twitter_social.svg);
+}
+.social-list__item:hover {
+  transform: scale(1.15, 1.15);
 }
 
 .social-list__link {

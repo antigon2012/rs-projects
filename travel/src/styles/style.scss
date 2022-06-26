@@ -1,5 +1,5 @@
-@import "./fonts.scss";
-@import "./nullStyle.scss";
+@import "./_fonts.scss";
+@import "./_nullStyle.scss";
 
 @mixin fs_link {
   font: {
@@ -73,6 +73,12 @@ body {
 }
 .header__nav-link {
   @include fs_link();
+  transition: all ease 0.3s;
+  &:hover {
+    color: #97665b;
+    transition: all ease 0.3s;
+    text-decoration: underline;
+  }
 }
 .header__nav-link:last-child {
   margin-right: 42.5px;
@@ -85,17 +91,21 @@ body {
     0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
   border: none;
+  transition: all ease 0.3s;
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
 }
 .header__button {
   margin-top: 24px;
   margin-bottom: 24px;
 }
-.plan__wrapper {
+.preview__wrapper {
   max-width: 892px;
   margin-top: 32px;
   margin-bottom: 254px;
 }
-.plan__title {
+.preview__title {
   font-family: $ff_AO;
   font-weight: 700;
   font-size: 80px;
@@ -103,7 +113,7 @@ body {
   color: #fff;
   margin-bottom: 32px;
 }
-.plan__description {
+.preview__description {
   font-family: $ff_AO;
   font-style: italic;
   font-weight: 700;
@@ -112,7 +122,7 @@ body {
   color: #fff;
   margin-bottom: 46px;
 }
-.plan__form {
+.preview__form {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
@@ -121,7 +131,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.plan__input {
+.preview__input {
   font-family: $ff_AO;
   font-style: italic;
   font-weight: 400;
@@ -130,7 +140,7 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   border: 0;
   background-color: transparent;
-  min-width: 280px;
+  width: auto;
   outline: 0;
   color: #f2785c;
   &:focus {
@@ -141,7 +151,7 @@ body {
     color: #f2785c;
   }
 }
-.plan__button {
+.preview__button {
   font-family: $ff_RH;
   font-weight: 500;
   font-size: 24px;
@@ -255,8 +265,12 @@ body {
   border-radius: 50%;
   background-color: #f2785c;
   opacity: 0.5;
+  cursor: pointer;
   &:nth-child(2) {
     opacity: 1;
+  }
+  &:hover {
+    transform: scale(1.15, 1.15);
   }
 }
 .destinations__button {
@@ -319,6 +333,10 @@ body {
   color: #0d606f;
   text-decoration: underline;
   font-weight: 600;
+  transition: all ease 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 .stories__button {
   min-width: 228px;
@@ -340,8 +358,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.footer__section {
-}
 .footer__copyright {
   width: 100%;
   display: flex;
@@ -355,7 +371,6 @@ body {
   margin-right: auto;
   gap: 5px;
   grid-column: 2 / 3;
-  // align-self: center;
 }
 .footer__social-list {
   display: flex;
@@ -365,9 +380,11 @@ body {
   padding-right: 15px;
 }
 .social-list__item {
+  fill: #fff;
   background-repeat: no-repeat;
   background-position: center center;
-  // background-size: 100%;
+  background-size: 100%;
+  transition: all ease 0.2s;
   &:first-child {
     background-image: url(../../../assets/svg/inst_social.svg);
   }
@@ -377,13 +394,14 @@ body {
   &:last-child {
     background-image: url(../../../assets/svg/twitter_social.svg);
   }
+  &:hover {
+    transform: scale(1.15, 1.15);
+    // filter: invert(55%) sepia(94%) saturate(859%) hue-rotate(322deg)
+    //   brightness(98%) contrast(93%);
+  }
 }
 .social-list__link {
   display: block;
   width: 33.65px;
   height: 33.65px;
-}
-.social-list__ {
-}
-.item {
 }
