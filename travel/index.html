@@ -12,28 +12,40 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__wrapper">
-        <div class="header__logo">
-          <img src="./assets/svg/logo.svg" alt="main-logo" class="logo__svg">
-          <h1 class="logo_text">Travel Portal</h1>
+  <div class="first_wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <img src="./assets/svg/logo.svg" alt="main-logo" class="logo__svg">
+            <h1 class="logo_text">Travel Portal</h1>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item"><a href="#steps" class="header__nav-link">How It Works</a></li>
+              <li class="header__nav-item"><label for="#preview" class="header__nav-link">Plan Your
+                  Trip</label></li>
+              <li class="header__nav-item"><a href="#destinations" class="header__nav-link">Destinations</a></li>
+              <li class="header__nav-item"><a href="#stories" class="header__nav-link">Travel Stories</a></li>
+              <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link_burger"">Account</a></li>
+              <li class=" header__nav-item header__nav-link_burger"><a href="#socialLinks"
+                    class="header__nav-link header__nav-link_burger">Social Media</a></li>
+            </ul>
+            <div class="nav-list__close-button">
+            </div>
+          </nav>
+          <div class="header__button-container">
+            <button class="button header__button">Login</button>
+            <div class="header__nav-button">
+              <div class="nav-button__item"></div>
+              <div class="nav-button__item"></div>
+              <div class="nav-button__item"></div>
+            </div>
+            <div class="overlay"></div>
+          </div>
         </div>
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item"><a href="#steps" class="header__nav-link">How It Works</a></li>
-            <li class="header__nav-item"><label for="#preview" class="header__nav-link">Plan Your
-                Trip</label></li>
-            <li class="header__nav-item"><a href="#destinations" class="header__nav-link">Destinations</a></li>
-            <li class="header__nav-item"><a href="#stories" class="header__nav-link">Travel Stories</a></li>
-          </ul>
-        </nav>
-        <button class="button header__button">Login</button>
       </div>
-    </div>
-  </header>
-
-  <main class="main">
+    </header>
     <section class="preview">
       <div class="container">
         <div class="preview__wrapper">
@@ -49,6 +61,8 @@
         </div>
       </div>
     </section>
+  </div>
+  <main class="main">
     <section class="steps" id="steps">
       <div class="container">
         <h2 class="section__title steps__title">3 STEPS TO THE PERFECT TRIP</h2>
@@ -71,33 +85,53 @@
         <div class="slider__wrapper">
           <ul class="slider__line">
             <li class="slider__item">
-              <img src="./assets/img/slider-firstImg-desktop.jpg" alt="Spain" class="slider__img">
+              <picture>
+                <source media="(min-width: 1230px)" srcset="./assets/img/slider-spain-desktop.jpg" type="image/jpg">
+                <source media="(max-width: 390px)" srcset="./assets/img/slider-spain-mobile.jpg" type="image/jpg">
+                <img class="slider__img" src="./assets/img/slider-spain-desktop.jpg" alt="Spain">
+              </picture>
               <span class="slider__coutry">Spain</span>
             </li>
             <li class="slider__item">
-              <img src="./assets/img/slider_secondImg_desktop.jpg" alt="Japan" class="slider__img">
+              <picture class="picture">
+                <source media="(min-width: 1230px)" srcset="./assets/img/slider-japan-desktop.jpg" type="image/jpg">
+                <source media="(max-width: 390px)" srcset="./assets/img/slder-japan-mobile.jpg" type="image/jpg">
+                <img class="slider__img" src="./assets/img/slider_japan_desktop.jpg" alt="Japan">
+              </picture>
               <span class="slider__coutry">Japan</span>
             </li>
             <li class="slider__item">
-              <img src="./assets/img/slider-thirdImg-desctop.jpg" alt="USA " class="slider__img">
+              <picture>
+                <source media="(min-width: 1230px)" srcset="./assets/img/slider-usa-desktop.jpg" type="image/jpg">
+                <source media="(max-width: 390px)" srcset="./assets/img/slider-usa-mobile.jpg" type="image/jpg">
+                <img class="slider__img" src="./assets/img/slider-usa-desktop.jpg" alt="USA">
+              </picture>
               <span class="slider__coutry">USA</span>
             </li>
           </ul>
         </div>
         <div class="slider-bread">
-          <span class="slider-bread__item"></span>
+          <span class="slider-bread__item slider-bread_active {
+      opacity: 1;
+    }"></span>
           <span class="slider-bread__item"></span>
           <span class="slider-bread__item"></span>
         </div>
         <button class="button destinations__button">Find More</button>
       </div>
     </section>
+  </main>
+  <div class="second-wrapper">
     <section class="stories" id="stories">
       <h2 class="section__title stories__title">Travel Stories</h2>
       <div class="container">
         <div class="stories__block-artical">
           <div class="block-artical__artical-item">
-            <img src="./assets/img/Rectangle29.jpg" alt="" class="artical__cover">
+            <picture>
+              <source media="(min-width: 1230px)" srcset="./assets/img/first-stories-desc.jpg" type="image/jpg">
+              <source media="(max-width: 390px)" srcset="./assets/img/first-stories-mob.jpg" type="image/jpg">
+              <img class="artical__cover" src="./assets/img/first-stories-desc.jpg" alt="" class="artical__cover">
+            </picture>
             <div class="artical__text-container">
               <h3 class="artical__title">10 Photos of Attractive Thailand</h3>
               <p class="artical__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -116,7 +150,11 @@
             </div>
           </div>
           <div class="block-artical__artical-item">
-            <img src="./assets/img/Rectangle30.jpg" alt="" class="artical__cover">
+            <picture>
+              <source media="(min-width: 1230px)" srcset="./assets/img/sec-stories-desc.jpg" type="image/jpg">
+              <source media="(max-width: 390px)" srcset="./assets/img/sec-stories-mob.jpg" type="image/jpg">
+              <img class="artical__cover" src="./assets/img/sec-stories-desc.jpg" alt="" class="artical__cover">
+            </picture>
             <div class="artical__text-container">
               <h3 class="artical__title">Canyonlands National Park, Utah</h3>
               <p class="artical__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -135,7 +173,11 @@
             </div>
           </div>
           <div class="block-artical__artical-item">
-            <img src="./assets/img/Rectangle31.jpg" alt="" class="artical__cover">
+            <picture>
+              <source media="(min-width: 1230px)" srcset="./assets/img/third-stories-desc.jpg" type="image/jpg">
+              <source media="(max-width: 390px)" srcset="./assets/img/third-stories-mob.jpg" type="image/jpg">
+              <img class="artical__cover" src="./assets/img/third-stories-desc.jpg" alt="" class="artical__cover">
+            </picture>
             <div class="artical__text-container">
               <h3 class="artical__title">I left my heart in the Mountains!</h3>
               <p class="artical__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -155,7 +197,11 @@
             </div>
           </div>
           <div class="block-artical__artical-item">
-            <img src="./assets/img/Rectangle32.jpg" alt="" class="artical__cover">
+            <picture>
+              <source media="(min-width: 1230px)" srcset="./assets/img/four-stories-desc.jpg" type="image/jpg">
+              <source media="(max-width: 390px)" srcset="./assets/img/four-stories-mob.jpg" type="image/jpg">
+              <img class="artical__cover" src="./assets/img/four-stories-desc.jpg" alt="" class="artical__cover">
+            </picture>
             <div class="artical__text-container">
               <h3 class="artical__title">The Longest journey in my life!</h3>
               <p class="artical__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -177,27 +223,27 @@
         <button class="button stories__button">See More</button>
       </div>
     </section>
-  </main>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__section footer__copyright">
-        <span>All Rights Reserved</span>
-        <span>©</span>
-        <span>Travel Portal</span>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__section footer__copyright">
+          <span>All Rights Reserved</span>
+          <span>©</span>
+          <span>Travel Portal</span>
+        </div>
+        <div class="footer__section footer__social">
+          <ul class="footer__social-list" id="socialLinks">
+            <li class="social-list__item"><a href="https://github.com/antigon2012" class="social-list__link"
+                title="GitHub">
+              </a></li>
+            <li class="social-list__item"><a href="#" class="social-list__link">
+              </a></li>
+            <li class="social-list__item"><a href="https://rs.school/js-stage0/" class="social-list__link"
+                title="RsSchool"></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer__section footer__social">
-        <ul class="footer__social-list">
-          <li class="social-list__item"><a href="https://github.com/antigon2012" class="social-list__link"
-              title="GitHub">
-            </a></li>
-          <li class="social-list__item"><a href="#" class="social-list__link">
-            </a></li>
-          <li class="social-list__item"><a href="https://rs.school/js-stage0/" class="social-list__link"
-              title="RsSchool"></a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
   <script src="./src/js/index.js" type="module"></script>
 </body>
 

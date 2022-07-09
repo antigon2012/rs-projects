@@ -29,3 +29,23 @@ console.log(
     в макете стили не указаны, реализованы по своему усмотрению, руководствуясь общим стилем макета +5\n
     плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5`
 );
+
+const body = document.querySelector("body");
+const headerBurger = document.querySelector(".header__nav-button");
+const headerNav = document.querySelector(".header__nav");
+const headerNavItem = document.querySelectorAll(".header__nav-item");
+const closeBtn = document.querySelector(".nav-list__close-button");
+const fadeLayer = document.querySelector(".overlay");
+
+const openMenu = () => {
+  headerNav.classList.toggle("nav_active");
+  fadeLayer.classList.toggle("overlay_active");
+  body.classList.toggle("no_scroll");
+};
+
+headerBurger.addEventListener("click", openMenu);
+headerNavItem.forEach((el) => {
+  el.addEventListener("click", openMenu);
+});
+fadeLayer.addEventListener("click", openMenu);
+closeBtn.addEventListener("click", openMenu);
