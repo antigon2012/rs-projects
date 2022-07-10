@@ -659,9 +659,6 @@ body {
 }
 
 @media screen and (max-width: 390px) {
-  .container {
-    overflow-x: hidden;
-  }
   .no_scroll {
     overflow: hidden;
   }
@@ -683,7 +680,6 @@ body {
     background-image: url("../../assets/img/footer-cover-mobile.jpg");
   }
   .header {
-    position: relative;
     padding-top: 45px;
     background: -webkit-gradient(linear, left top, left bottom, from(#0d606f), to(rgba(13, 96, 111, 0)));
     background: linear-gradient(180deg, #0d606f 0%, rgba(13, 96, 111, 0) 100%);
@@ -698,7 +694,9 @@ body {
     pointer-events: none;
   }
   .header__nav {
-    position: absolute;
+    position: fixed;
+    visibility: hidden;
+    pointer-events: none;
     top: 0;
     margin: 0;
     padding: 44px 15px 30px 44px;
@@ -708,12 +706,14 @@ body {
     -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s;
     background-color: #f2785c;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(250%);
+            transform: translateX(250%);
   }
   .nav_active {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    visibility: visible;
+    pointer-events: all;
+    -webkit-transform: translateX(130%);
+            transform: translateX(130%);
     z-index: 5;
   }
   .header__nav-list {
@@ -724,6 +724,8 @@ body {
             flex-direction: column;
     gap: 9px;
     margin: 0;
+  }
+  .header__nav-link {
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
@@ -856,7 +858,33 @@ body {
     margin-bottom: 20px;
   }
   .slider__wrapper {
+    position: relative;
     margin-bottom: 10px;
+  }
+  .slider__button {
+    position: absolute;
+    top: 90px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+  }
+  .slider__button:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .slider__before {
+    left: 5px;
+    background-image: url("../../assets/svg/arrow-slider-left.svg");
+  }
+  .slider__after {
+    right: 5px;
+    background-image: url("../../assets/svg/arrow-slider.svg");
   }
   .slider__line {
     right: 0;
