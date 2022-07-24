@@ -54,8 +54,11 @@ function alertLogin() {
 
 login.addEventListener("click", openModal);
 acc.addEventListener("click", openModal);
-modal.addEventListener("click", (e) => e.stopPropagation());
-modalOverlay.addEventListener("click", closeModal);
+modalOverlay.addEventListener("click", (event) => {
+  if (event.target.classList.contains("modal__overlay")) {
+    closeModal();
+  }
+});
 
 sign.signBtn.addEventListener("click", alertLogin);
 
@@ -72,6 +75,7 @@ const modalTitle = modal.querySelector(".modal__title"),
 function registerModal() {
   modalTitle.textContent = "Create account";
   registerDescr.textContent = "Already have an account?";
+  signIn.value = "Sign Up";
   registerBtn.textContent = "Log in";
   signFacebook.classList.add("remove");
   signGoogle.classList.add("remove");
@@ -82,6 +86,7 @@ function registerModal() {
 function loginModal() {
   modalTitle.textContent = "Log in to your account";
   registerDescr.textContent = "Don’t have an account?";
+  signIn.value = "Sign In";
   registerBtn.textContent = "Register";
   signFacebook.classList.remove("remove");
   signGoogle.classList.remove("remove");
