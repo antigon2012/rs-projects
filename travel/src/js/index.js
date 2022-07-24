@@ -1,41 +1,12 @@
-console.log(
-  `Вёрстка валидная +10\n
-Вёрстка семантическая +20\n
-    В коде странице присутствуют следующие элементы:\n
-    <header>, <main>, <footer> +3\n
-    четыре элемента <section> (по количеству секций) +3\n
-    только один заголовок <h1> +3\n
-    четыре заголовка <h2> +3\n
-    один элемент <nav> +3\n
-    два списка ul > li > a (панель навигации, ссылки на соцсети) +3\n
-    четыре кнопки <button> +2\n
-Вёрстка соответствует макету +48\n
-    блок <header> +6\n
-    секция preview +9\n
-    секция steps +9\n
-    секция destinations +9\n
-    секция stories +9\n
-    блок <footer> +6\n
-Требования к css + 12\n
-    для построения сетки используются флексы или гриды +2\n
-    при уменьшении масштаба страницы браузера вёрстка размещается по центру, а не сдвигается в сторону +2\n
-    фоновый цвет тянется на всю ширину страницы +2\n
-    иконки добавлены в формате .svg +2\n
-    изображения добавлены в формате .jpg +2\n
-    есть favicon +2\n
-Интерактивность +20\n
-    плавная прокрутка по якорям +5\n
-    иконки соцсетей в футере при нажатии на них ведут на гитхаб автора проекта и на страницу курса +5\n
-    в макете стили не указаны, реализованы по своему усмотрению, руководствуясь общим стилем макета +5\n
-    плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5`
-);
+const body = document.body,
+  headerBurger = document.querySelector(".header__nav-button"),
+  headerNav = document.querySelector(".header__nav"),
+  headerNavItem = document.querySelectorAll(".header__nav-item"),
+  closeBtn = document.querySelector(".nav-list__close-button"),
+  fadeLayer = document.querySelector(".overlay"),
+  lockPaddingBody = window.innerWidth - body.offsetWidth + "px";
 
-const body = document.querySelector("body");
-const headerBurger = document.querySelector(".header__nav-button");
-const headerNav = document.querySelector(".header__nav");
-const headerNavItem = document.querySelectorAll(".header__nav-item");
-const closeBtn = document.querySelector(".nav-list__close-button");
-const fadeLayer = document.querySelector(".overlay");
+// Burger
 
 const openMenu = () => {
   headerNav.classList.toggle("nav_active");
@@ -49,3 +20,99 @@ headerNavItem.forEach((el) => {
 });
 fadeLayer.addEventListener("click", openMenu);
 closeBtn.addEventListener("click", openMenu);
+
+// Modal Sign In
+
+const login = document.querySelector(".header__button"),
+  acc = document.querySelector(".account"),
+  modal = document.querySelector(".modal"),
+  modalOverlay = document.querySelector(".modal__overlay"),
+  signIn = document.querySelector(".sign-in__btn");
+
+function openModal() {
+  modal.classList.add("show");
+  body.classList.add("no_scroll");
+  modalOverlay.classList.add("modal__overlay_active");
+  body.style.paddingRight = lockPaddingBody;
+  if (signFacebook.classList.contains("remove")) {
+    loginModal();
+  }
+}
+
+function closeModal() {
+  modal.classList.remove("show");
+  body.classList.remove("no_scroll");
+  body.style.paddingRight = "";
+  modalOverlay.classList.remove("modal__overlay_active");
+}
+
+function alertLogin() {
+  let pass = sign.password.value,
+    mail = sign.email.value;
+  alert(`E-mail: ${mail}\nPassword: ${pass}`);
+}
+
+login.addEventListener("click", openModal);
+acc.addEventListener("click", openModal);
+modal.addEventListener("click", (e) => e.stopPropagation());
+modalOverlay.addEventListener("click", closeModal);
+
+sign.signBtn.addEventListener("click", alertLogin);
+
+// Modal register
+
+const modalTitle = modal.querySelector(".modal__title"),
+  signFacebook = modal.querySelector(".sign-in__facebook"),
+  signGoogle = modal.querySelector(".sign-in__google"),
+  orLine = modal.querySelector(".or__line"),
+  forgotPass = modal.querySelector(".modal__forgot-pass"),
+  registerDescr = modal.querySelector(".register__description"),
+  registerBtn = modal.querySelector(".register");
+
+function registerModal() {
+  modalTitle.textContent = "Create account";
+  registerDescr.textContent = "Already have an account?";
+  registerBtn.textContent = "Log in";
+  signFacebook.classList.add("remove");
+  signGoogle.classList.add("remove");
+  orLine.classList.add("remove");
+  forgotPass.classList.add("remove");
+}
+
+function loginModal() {
+  modalTitle.textContent = "Log in to your account";
+  registerDescr.textContent = "Don’t have an account?";
+  registerBtn.textContent = "Register";
+  signFacebook.classList.remove("remove");
+  signGoogle.classList.remove("remove");
+  orLine.classList.remove("remove");
+  forgotPass.classList.remove("remove");
+}
+
+function isRegister() {
+  signFacebook.classList.contains("remove") ? loginModal() : registerModal();
+}
+
+registerBtn.addEventListener("click", isRegister);
+
+// slider
+
+// const slides = document.querySelectorAll(".slider__img");
+// const slider = [];
+// for (let i = 0; i < slides.length; i++) {
+//   slider[i] = slides[i].src;
+//   slides[i].remove();
+// }
+
+// let step = 0;
+// let offset = 0;
+
+// function draw() {
+//   let img = document.createElement("img");
+//   img.src = slider[step];
+//   img.classList.add("slider__img");
+//   img.style.left = offset * 1000 + "px";
+//   document.querySelector(".slider__line").appendChild(img);
+// }
+
+// draw();

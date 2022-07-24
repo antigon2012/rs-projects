@@ -11,7 +11,7 @@
   <title>Travel Portal</title>
 </head>
 
-<body>
+<body class="">
   <div class="first_wrapper">
     <header class="header">
       <div class="container">
@@ -27,9 +27,10 @@
                   Trip</label></li>
               <li class="header__nav-item"><a href="#destinations" class="header__nav-link">Destinations</a></li>
               <li class="header__nav-item"><a href="#stories" class="header__nav-link">Travel Stories</a></li>
-              <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link_burger"">Account</a></li>
+              <li class="header__nav-item"><a href="#"
+                  class="header__nav-link header__nav-link_burger account">Account</a></li>
               <li class=" header__nav-item header__nav-link_burger"><a href="#socialLinks"
-                    class="header__nav-link header__nav-link_burger">Social Media</a></li>
+                  class="header__nav-link header__nav-link_burger">Social Media</a></li>
             </ul>
             <div class="nav-list__close-button">
             </div>
@@ -58,6 +59,33 @@
               placeholder="What would you like to do?">
             <button class="button preview__button">Start Planning</button>
           </form>
+        </div>
+        <!-- Modal -->
+        <div class="modal__overlay">
+          <div class="modal">
+            <h2 class="modal__title">Log in to your account</h2>
+            <button class="modal__sign-in sign-in__facebook"><img src="./assets/svg/facebook_sign.svg" alt=""
+                class="sign-in__icon"> Sign In
+              with
+              Facebook</button>
+            <button class="modal__sign-in sign-in__google"><img src="./assets/svg/google_sign.svg" alt=""
+                class="sign-in__icon"> Sign In with
+              Google</button>
+            <div class="or__line"><span class="modal__or">or</span></div>
+            <form action="#" name="sign" class="modal__form">
+              <label class="form__label" for="e-mail">E-mail</label>
+              <input class="form__input" type="email" name="email" id="e-mail" required>
+              <label class="form__label" for="password">Password</label>
+              <input class="form__input" type="password" name="password" id="password" required>
+              <input type="button" name="signBtn" value="Sign In" class="modal__sign-in sign-in__btn">
+            </form>
+            <a href="#" class="modal__forgot-pass">Forgot Your Password?</a>
+            <div class="line"></div>
+            <p>
+              <span class="register__description">Don’t have an account?</span>
+              <a class="register" href="#">Register</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
