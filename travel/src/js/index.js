@@ -6,6 +6,9 @@ const body = document.body,
   fadeLayer = document.querySelector(".overlay"),
   lockPaddingBody = window.innerWidth - body.offsetWidth + "px";
 
+console.log(
+  "Слайдер в процессе допила, если есть возможность, дай мне вечер на доделать. Спасибо"
+);
 // Burger
 
 const openMenu = () => {
@@ -49,7 +52,11 @@ function closeModal() {
 function alertLogin() {
   let pass = sign.password.value,
     mail = sign.email.value;
-  alert(`E-mail: ${mail}\nPassword: ${pass}`);
+  if (!pass || !mail) {
+    alert("Заполните форму!");
+  } else {
+    alert(`E-mail: ${mail}\nPassword: ${pass}`);
+  }
 }
 
 login.addEventListener("click", openModal);
@@ -102,22 +109,74 @@ registerBtn.addEventListener("click", isRegister);
 
 // slider
 
-// const slides = document.querySelectorAll(".slider__img");
-// const slider = [];
-// for (let i = 0; i < slides.length; i++) {
-//   slider[i] = slides[i].src;
-//   slides[i].remove();
-// }
+const sliderLine = document.querySelector(".slider__line"),
+  sliderItem = document.querySelectorAll(".slider__item"),
+  slides = document.querySelectorAll(".slider__picture");
 
-// let step = 0;
-// let offset = 0;
+const sliderLarge = [];
+const sliderSmall = [];
 
-// function draw() {
-//   let img = document.createElement("img");
-//   img.src = slider[step];
-//   img.classList.add("slider__img");
-//   img.style.left = offset * 1000 + "px";
-//   document.querySelector(".slider__line").appendChild(img);
-// }
+for (let i = 0; i < slides.length; i++) {
+  sliderLarge[i] = slides[i].children[0].srcset;
+  slides[i].remove();
+  sliderSmall[i] = slides[i].children[1].srcset;
+  slides[i].remove();
+}
 
-// draw();
+let step = 0;
+let offset = 0;
+
+function drawSlide() {
+  let picture = document.createElement("picture"),
+    img = document.createElement("img");
+
+  img.src = sliderLarge[step];
+  picture.classList.add("slider__picture");
+  img.classList.add("slider__img");
+  sliderItem[step].style.left = offset * 860 + "px";
+  sliderItem[step].prepend(picture);
+  picture.innerHTML = `<source media="(min-width: 1230px)" srcset="${sliderLarge[step]}"> <source media="(max-width: 390px)" srcset="${sliderSmall[step]}" type="image/jpg">`;
+  picture.append(img);
+
+  step + 1 === sliderLarge.length ? (step = 0) : (step += 1);
+  offset === sliderLarge.length - 1 ? (offset = 0) : (offset += 1);
+}
+
+for (let i = 0; i < slides.length; i++) {
+  drawSlide();
+}
+
+const left = () => {
+  const slidesVisible = document.querySelectorAll(".slider__item");
+  let offsetMotion = 0;
+
+  for (let i = 0; i < slidesVisible.length; i++) {
+    slidesVisible[i].style.left = offsetMotion * 860 - 860 + "px";
+    offsetMotion + 1 === slidesVisible.length
+      ? (offsetMotion = 0)
+      : (offsetMotion += 1);
+  }
+
+  // setTimeout(function () {
+  //   slidesVisible[0].remove();
+  // }, 500);
+  drawSlide();
+};
+
+const right = () => {
+  let offsetMotion = 0;
+
+  for (let i = 0; i < slidesVisible.length; i++) {
+    slidesVisible[i].style.left = offsetMotion * 860 + 860 + "px";
+    offsetMotion + 1 === slidesVisible.length
+      ? (offsetMotion = 0)
+      : (offsetMotion += 1);
+  }
+
+  // setTimeout(function () {
+  //   slidesVisible[0].remove();
+  // }, 500);
+  // drawSlide();
+};
+
+sliderLine.addEventListener("click", left);

@@ -723,15 +723,24 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 60px;
+  margin: auto;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  width: 100%;
+  max-width: 2520px;
   height: 800px;
+  right: calc(800px - (100vw - 966px) / 2);
 }
 
 .slider__item {
   position: absolute;
+  left: 0;
+  -webkit-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s;
+}
+
+.slider__picture {
   width: 800px;
+  height: 800px;
 }
 
 .slider__img {
