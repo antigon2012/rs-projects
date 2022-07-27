@@ -6,9 +6,6 @@ const body = document.body,
   fadeLayer = document.querySelector(".overlay"),
   lockPaddingBody = window.innerWidth - body.offsetWidth + "px";
 
-console.log(
-  "Слайдер в процессе допила, если есть возможность, дай мне вечер на доделать. Спасибо"
-);
 // Burger
 
 const openMenu = () => {
@@ -111,15 +108,19 @@ registerBtn.addEventListener("click", isRegister);
 
 const sliderLine = document.querySelector(".slider__line"),
   sliderItem = document.querySelectorAll(".slider__item"),
+  sliderText = document.querySelectorAll(".slider__country"),
   slides = document.querySelectorAll(".slider__picture");
 
-const sliderLarge = [];
-const sliderSmall = [];
+const srcLarge = [];
+const srcSmall = [];
+const sliderCountry = [];
 
 for (let i = 0; i < slides.length; i++) {
-  sliderLarge[i] = slides[i].children[0].srcset;
-  slides[i].remove();
-  sliderSmall[i] = slides[i].children[1].srcset;
+  srcLarge[i] = slides[i].children[0].srcset;
+  srcSmall[i] = slides[i].children[1].srcset;
+  sliderCountry[i] = sliderText[i].textContent;
+  sliderText[i].remove();
+  sliderItem[i].remove();
   slides[i].remove();
 }
 
@@ -127,56 +128,76 @@ let step = 0;
 let offset = 0;
 
 function drawSlide() {
-  let picture = document.createElement("picture"),
-    img = document.createElement("img");
+  let sliderCard = document.createElement("li");
+  sliderCard.classList.add("slider__item");
+  // sliderCard.style.left = offset * 860 + "px";
 
-  img.src = sliderLarge[step];
+  let picture = document.createElement("picture");
   picture.classList.add("slider__picture");
+  picture.innerHTML = `<source media="(min-width: 1230px)" srcset="${srcLarge[step]}"> <source media="(max-width: 390px)" srcset="${srcSmall[step]}" type="image/jpg">`;
+
+  let img = document.createElement("img");
+  img.src = srcLarge[step];
   img.classList.add("slider__img");
-  sliderItem[step].style.left = offset * 860 + "px";
-  sliderItem[step].prepend(picture);
-  picture.innerHTML = `<source media="(min-width: 1230px)" srcset="${sliderLarge[step]}"> <source media="(max-width: 390px)" srcset="${sliderSmall[step]}" type="image/jpg">`;
+
   picture.append(img);
 
-  step + 1 === sliderLarge.length ? (step = 0) : (step += 1);
-  offset === sliderLarge.length - 1 ? (offset = 0) : (offset += 1);
+  let span = document.createElement("span");
+  span.classList.add("slider__country");
+  span.textContent = sliderCountry[step];
+
+  sliderCard.prepend(picture);
+  sliderCard.append(span);
+
+  sliderLine.append(sliderCard);
+  step + 1 === srcLarge.length ? (step = 0) : (step += 1);
 }
 
-for (let i = 0; i < slides.length; i++) {
+for (let i = 0; i < sliderItem.length; i++) {
   drawSlide();
+  // sliderItem[i].style.left = offset * 860 + "px";
+}
+
+const generateSlide = document.querySelectorAll(".slider__item");
+for (let i = 0; i < generateSlide.length; i++) {
+  generateSlide[i].style.left = offset * 860 + "px";
+  offset + 1 === srcLarge.length ? (offset = 0) : (offset += 1);
 }
 
 const left = () => {
   const slidesVisible = document.querySelectorAll(".slider__item");
   let offsetMotion = 0;
-
+  drawSlide();
   for (let i = 0; i < slidesVisible.length; i++) {
     slidesVisible[i].style.left = offsetMotion * 860 - 860 + "px";
-    offsetMotion + 1 === slidesVisible.length
+    offsetMotion === slidesVisible.length
       ? (offsetMotion = 0)
       : (offsetMotion += 1);
   }
-
-  // setTimeout(function () {
-  //   slidesVisible[0].remove();
-  // }, 500);
-  drawSlide();
+  setTimeout(function () {
+    slidesVisible[0].remove();
+  }, 500);
 };
 
 const right = () => {
+  drawSlide(0);
+  const slidesVisible = document.querySelectorAll(".slider__item");
   let offsetMotion = 0;
-
   for (let i = 0; i < slidesVisible.length; i++) {
     slidesVisible[i].style.left = offsetMotion * 860 + 860 + "px";
-    offsetMotion + 1 === slidesVisible.length
+    offsetMotion === slidesVisible.length
       ? (offsetMotion = 0)
       : (offsetMotion += 1);
   }
-
-  // setTimeout(function () {
-  //   slidesVisible[0].remove();
-  // }, 500);
-  // drawSlide();
+  setTimeout(function () {
+    slidesVisible[slidesVisible.length - 1].remove();
+  }, 500);
 };
 
-sliderLine.addEventListener("click", left);
+sliderLine.addEventListener("click", (e) => {
+  if (e.target.sliderLine) {
+    right();
+  } else if (e.target.children[2]) {
+    left();
+  }
+});
