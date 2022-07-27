@@ -258,8 +258,8 @@ body {
   transition: all ease 0.5s;
   max-width: 2520px;
   height: 800px;
-  right: calc(800px - (100vw - 966px) / 2);
-  // overflow-x: hidden;
+  // right: calc(800px - (100vw - 966px) / 2);
+  overflow-x: hidden;
 }
 .slider__item {
   position: absolute;
@@ -267,14 +267,13 @@ body {
   transition: all ease-in 0.5s;
 }
 .slider__picture {
-  // position: absolute;
   width: 800px;
   height: 800px;
 }
 .slider__img {
   border-radius: 16px;
 }
-.slider__coutry {
+.slider__country {
   font-family: $ff_RH;
   font-weight: 500;
   font-size: 32px;
@@ -512,6 +511,7 @@ body {
     line-height: 12px;
   }
   .slider__line {
+    height: 438px;
     right: 0;
     gap: 0;
   }
@@ -792,6 +792,9 @@ body {
   .slider__wrapper {
     position: relative;
     margin-bottom: 10px;
+  }
+  .slider__line {
+    height: 250px;
   }
   .slider__button {
     position: absolute;
