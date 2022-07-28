@@ -108,96 +108,134 @@ registerBtn.addEventListener("click", isRegister);
 
 const sliderLine = document.querySelector(".slider__line"),
   sliderItem = document.querySelectorAll(".slider__item"),
-  sliderText = document.querySelectorAll(".slider__country"),
-  slides = document.querySelectorAll(".slider__picture");
+  sliderBread = document.querySelectorAll(".slider-bread__item"),
+  width = body.clientWidth;
 
-const srcLarge = [];
-const srcSmall = [];
-const sliderCountry = [];
+console.log(width);
 
-for (let i = 0; i < slides.length; i++) {
-  srcLarge[i] = slides[i].children[0].srcset;
-  srcSmall[i] = slides[i].children[1].srcset;
-  sliderCountry[i] = sliderText[i].textContent;
-  sliderText[i].remove();
-  sliderItem[i].remove();
-  slides[i].remove();
-}
+let offset = -860;
+let index = 1;
 
-let step = 0;
-let offset = 0;
+const leftMove = () => {
+  offset -= 860;
+  index += 1;
+  sliderLine.style.left = offset + "px";
 
-function drawSlide() {
-  let sliderCard = document.createElement("li");
-  sliderCard.classList.add("slider__item");
-  // sliderCard.style.left = offset * 860 + "px";
+  sliderBread.forEach((el) => el.classList.remove("slider-bread__item_active"));
+  sliderBread[index].classList.add("slider-bread__item_active");
 
-  let picture = document.createElement("picture");
-  picture.classList.add("slider__picture");
-  picture.innerHTML = `<source media="(min-width: 1230px)" srcset="${srcLarge[step]}"> <source media="(max-width: 390px)" srcset="${srcSmall[step]}" type="image/jpg">`;
-
-  let img = document.createElement("img");
-  img.src = srcLarge[step];
-  img.classList.add("slider__img");
-
-  picture.append(img);
-
-  let span = document.createElement("span");
-  span.classList.add("slider__country");
-  span.textContent = sliderCountry[step];
-
-  sliderCard.prepend(picture);
-  sliderCard.append(span);
-
-  sliderLine.append(sliderCard);
-  step + 1 === srcLarge.length ? (step = 0) : (step += 1);
-}
-
-for (let i = 0; i < sliderItem.length; i++) {
-  drawSlide();
-  // sliderItem[i].style.left = offset * 860 + "px";
-}
-
-const generateSlide = document.querySelectorAll(".slider__item");
-for (let i = 0; i < generateSlide.length; i++) {
-  generateSlide[i].style.left = offset * 860 + "px";
-  offset + 1 === srcLarge.length ? (offset = 0) : (offset += 1);
-}
-
-const left = () => {
-  const slidesVisible = document.querySelectorAll(".slider__item");
-  let offsetMotion = 0;
-  drawSlide();
-  for (let i = 0; i < slidesVisible.length; i++) {
-    slidesVisible[i].style.left = offsetMotion * 860 - 860 + "px";
-    offsetMotion === slidesVisible.length
-      ? (offsetMotion = 0)
-      : (offsetMotion += 1);
+  if (index === 2) {
+    sliderItem[sliderItem.length - 1].style.opacity = "0.5";
   }
-  setTimeout(function () {
-    slidesVisible[0].remove();
-  }, 500);
 };
 
-const right = () => {
-  drawSlide(0);
-  const slidesVisible = document.querySelectorAll(".slider__item");
-  let offsetMotion = 0;
-  for (let i = 0; i < slidesVisible.length; i++) {
-    slidesVisible[i].style.left = offsetMotion * 860 + 860 + "px";
-    offsetMotion === slidesVisible.length
-      ? (offsetMotion = 0)
-      : (offsetMotion += 1);
-  }
-  setTimeout(function () {
-    slidesVisible[slidesVisible.length - 1].remove();
-  }, 500);
-};
+const rightMove = () => {
+  offset += 860;
+  index -= 1;
+  sliderLine.style.left = offset + "px";
 
-sliderLine.addEventListener("click", (e) => {
-  if (e.target.sliderLine) {
-    right();
-  } else if (e.target.children[2]) {
-    left();
+  sliderBread.forEach((el) => el.classList.remove("slider-bread__item_active"));
+  sliderBread[index].classList.add("slider-bread__item_active");
+
+  if (index === 0) {
+    sliderItem[0].style.opacity = "0.5";
   }
-});
+};
+if (body.clientWidth > 1230) {
+  sliderLine.addEventListener("click", (event) => {
+    if (event.target.getAttribute("data-index") > 2) {
+      rightMove();
+    } else if (event.target.getAttribute("data-index") < 2) {
+      leftMove();
+    }
+  });
+}
+
+//   sliderItem = document.querySelectorAll(".slider__item"),
+//   sliderText = document.querySelectorAll(".slider__country"),
+//   slides = document.querySelectorAll(".slider__picture");
+
+// const srcLarge = [];
+// const srcSmall = [];
+// const sliderCountry = [];
+
+// for (let i = 0; i < slides.length; i++) {
+//   srcLarge[i] = slides[i].children[0].srcset;
+//   srcSmall[i] = slides[i].children[1].srcset;
+//   sliderCountry[i] = sliderText[i].textContent;
+//   sliderText[i].remove();
+//   sliderItem[i].remove();
+//   slides[i].remove();
+// }
+
+// let step = 0;
+// let offset = -1;
+
+// function drawSlide() {
+//   let sliderCard = document.createElement("li");
+//   sliderCard.classList.add("slider__item");
+//   // sliderCard.style.left = offset * 860 + "px";
+
+//   let picture = document.createElement("picture");
+//   picture.classList.add("slider__picture");
+//   picture.innerHTML = `<source media="(min-width: 1230px)" srcset="${srcLarge[step]}"> <source media="(max-width: 390px)" srcset="${srcSmall[step]}" type="image/jpg">`;
+
+//   let img = document.createElement("img");
+//   img.src = srcLarge[step];
+//   img.classList.add("slider__img");
+
+//   picture.append(img);
+
+//   let span = document.createElement("span");
+//   span.classList.add("slider__country");
+//   span.textContent = sliderCountry[step];
+
+//   sliderCard.prepend(picture);
+//   sliderCard.append(span);
+
+//   sliderLine.append(sliderCard);
+//   step + 1 === srcLarge.length ? (step = 0) : (step += 1);
+// }
+
+// for (let i = 0; i < sliderItem.length; i++) {
+//   drawSlide();
+//   // sliderItem[i].style.left = offset * 860 + "px";
+// }
+
+// const generateSlide = document.querySelectorAll(".slider__item");
+// for (let i = 0; i < generateSlide.length; i++) {
+//   generateSlide[i].style.left = offset * 860 + "px";
+//   offset + 1 === srcLarge.length ? (offset = 0) : (offset += 1);
+// }
+
+// const left = () => {
+//   const slidesVisible = document.querySelectorAll(".slider__item");
+//   let offsetMotion = 0;
+//   drawSlide();
+//   for (let i = 0; i < slidesVisible.length; i++) {
+//     slidesVisible[i].style.left = offsetMotion * 860 - 860 + "px";
+//     offsetMotion === slidesVisible.length
+//       ? (offsetMotion = 0)
+//       : (offsetMotion += 1);
+//   }
+//   setTimeout(function () {
+//     slidesVisible[0].remove();
+//   }, 500);
+// };
+
+// const right = () => {
+//   drawSlide(0);
+//   const slidesVisible = document.querySelectorAll(".slider__item");
+//   let offsetMotion = 0;
+//   for (let i = 0; i < slidesVisible.length; i++) {
+//     slidesVisible[i].style.left = offsetMotion * 860 + 860 + "px";
+//     offsetMotion === slidesVisible.length
+//       ? (offsetMotion = 0)
+//       : (offsetMotion += 1);
+//   }
+//   setTimeout(function () {
+//     slidesVisible[slidesVisible.length - 1].remove();
+//   }, 500);
+// };
+
+// sliderLine.addEventListener("click", left);

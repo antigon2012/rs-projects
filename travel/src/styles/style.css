@@ -708,13 +708,18 @@ body {
 }
 
 .slider__wrapper {
-  overflow-x: hidden;
-  position: relative;
   margin-bottom: 24px;
 }
 
 .slider__button {
   display: none;
+}
+
+.slider__container {
+  position: relative;
+  overflow-x: hidden;
+  width: 2520px;
+  right: calc(800px - (100vw - 966px) / 2);
 }
 
 .slider__line {
@@ -723,17 +728,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 60px;
-  margin: auto;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  max-width: 2520px;
+  max-width: 4240px;
   height: 800px;
-  overflow-x: hidden;
+  left: -860px;
 }
 
 .slider__item {
-  position: absolute;
-  left: 0;
+  position: relative;
   -webkit-transition: all ease-in 0.5s;
   transition: all ease-in 0.5s;
 }
@@ -778,7 +781,7 @@ body {
   cursor: pointer;
 }
 
-.slider-bread__item .slider-bread_active {
+.slider-bread__item_active {
   opacity: 1;
 }
 

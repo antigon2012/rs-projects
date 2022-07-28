@@ -243,27 +243,29 @@ body {
   margin-bottom: 46px;
 }
 .slider__wrapper {
-  overflow-x: hidden;
-  position: relative;
   margin-bottom: 24px;
 }
 .slider__button {
   display: none;
 }
+.slider__container {
+  position: relative;
+  overflow-x: hidden;
+  width: 2520px;
+  // margin: auto;
+  right: calc(800px - (100vw - 966px) / 2);
+}
 .slider__line {
   position: relative;
   display: flex;
   gap: 60px;
-  margin: auto;
   transition: all ease 0.5s;
-  max-width: 2520px;
+  max-width: 4240px;
   height: 800px;
-  // right: calc(800px - (100vw - 966px) / 2);
-  overflow-x: hidden;
+  left: -860px;
 }
 .slider__item {
-  position: absolute;
-  left: 0;
+  position: relative;
   transition: all ease-in 0.5s;
 }
 .slider__picture {
@@ -298,7 +300,7 @@ body {
   background-color: #f2785c;
   opacity: 0.5;
   cursor: pointer;
-  & .slider-bread_active {
+  &_active {
     opacity: 1;
   }
   &:hover {
