@@ -15,7 +15,6 @@ const showDate = () => {
     weekday: "long",
     month: "long",
     day: "numeric",
-    // timeZone: "UTC + 3",
   };
   const currentDate = date.toLocaleDateString("en-En", options);
   dateLocal.textContent = currentDate;
