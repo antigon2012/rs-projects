@@ -1,25 +1,24 @@
 const time = document.querySelector(".time");
-const date = document.querySelector(".date");
+const dateLocal = document.querySelector(".date");
 
 const showTime = () => {
   const date = new Date();
   const currentTime = date.toLocaleTimeString();
   time.textContent = currentTime;
+  showDate();
   setTimeout(showTime, 1000);
 };
 
 const showDate = () => {
   const date = new Date();
   const options = {
+    weekday: "long",
     month: "long",
     day: "numeric",
-    // hour: "numeric",
-    // minute: "numeric",
-    timeZone: "UTC",
+    // timeZone: "UTC + 3",
   };
-  const currentDate = date.toLocaleDateString("en-Br", options);
-  date.textContent = currentDate;
-  console.log(currentDate);
+  const currentDate = date.toLocaleDateString("en-En", options);
+  dateLocal.textContent = currentDate;
 };
 
-export { showTime, showDate };
+export { showTime };

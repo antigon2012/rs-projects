@@ -1,4 +1,3 @@
-import { showTime, showDate } from "./time.js";
+import { showTime } from "./time.js";
 
 showTime();
-showDate();
