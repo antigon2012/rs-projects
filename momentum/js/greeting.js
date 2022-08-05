@@ -1,4 +1,4 @@
-export { showGreeting };
+export { showGreeting, getTimeOfDay };
 
 const greeting = document.querySelector(".greeting");
 const timeOfDayArr = ["night", "morning", "afternoon", "evening"];
@@ -7,7 +7,7 @@ const getTimeOfDay = () => {
   const date = new Date();
   const hours = date.getHours();
 
-  if (hours / 6 > 0 && hours / 6 < 1) {
+  if (hours / 6 < 1) {
     return timeOfDayArr[0];
   } else if (hours / 6 >= 1 && hours / 6 < 2) {
     return timeOfDayArr[1];
