@@ -12,8 +12,12 @@ let randomNum = getRandomNum();
 const setBg = () => {
   let timeOfDay = getTimeOfDay();
   let bgNum = (randomNum + "").padStart(2, "0");
+  const img = new Image();
+  img.src = `https://raw.githubusercontent.com/antigon2012/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
 
-  body.style.backgroundImage = `url('https://raw.githubusercontent.com/antigon2012/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
+  img.onload = () => {
+    body.style.backgroundImage = `url('https://raw.githubusercontent.com/antigon2012/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
+  };
 };
 
 const getSlideNext = () => {
