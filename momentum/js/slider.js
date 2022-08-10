@@ -1,5 +1,5 @@
 import { getTimeOfDay } from "./greeting.js";
-export { setBg, getSlideNext, getSlidePrev };
+export { setBg, getSlideNext, getSlidePrev, getRandomNum };
 
 const body = document.body;
 
