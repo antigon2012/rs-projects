@@ -13,10 +13,32 @@
 <body>
   <header class="header">
     <div class="player">
-      <div class="player-controls">
-        <button class="play-prev player-icon"></button>
-        <button class="play player-icon"></button>
-        <button class="play-next player-icon"></button>
+      <div class="player-header">
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <div class="modern-player-controls">
+          <div class="left-column-player">
+            <div class="current-track"></div>
+            <div class="timeline">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="track-time">
+            <div class="current-time">0:00</div>
+            <div class="divider">/</div>
+            <div class="duration">0:00</div>
+          </div>
+          <div class="volume-container">
+            <button class="volume-button volume-on">
+            </button>
+            <div class="volume-slider">
+              <input class="sound-volume" type="range" min="0" max="1" step="0.01">
+            </div>
+          </div>
+        </div>
       </div>
       <ul class="play-list"></ul>
     </div>
