@@ -3,7 +3,9 @@ import { playList } from "./playList.js";
 const play = document.querySelector(".play"),
   mutedBtn = document.querySelector(".volume-button"),
   currentTrack = document.querySelector(".current-track"),
-  duration = document.querySelector(".duration");
+  duration = document.querySelector(".duration"),
+  timeline = document.querySelector(".timeline"),
+  progress = document.querySelector(".progress");
 
 const audio = new Audio();
 
@@ -112,6 +114,17 @@ const getCurrentTimeOfAudio = () => {
   setTimeout(getCurrentTimeOfAudio, 500);
 };
 
+const updateProgressBar = () => {
+  let timeToWidthCoeff = 200 / audio.duration;
+  progress.style.width = `${Math.round(
+    parseInt(audio.currentTime) * timeToWidthCoeff
+  )}px`;
+  setTimeout(updateProgressBar, 500);
+  console.log(
+    `${Math.round(parseInt(audio.currentTime) * timeToWidthCoeff)}px`
+  );
+};
+
 export {
   playAudio,
   play,
@@ -123,4 +136,5 @@ export {
   getDurationAudio,
   getTimeCodeFromCurrentAudio,
   getCurrentTimeOfAudio,
+  updateProgressBar,
 };
