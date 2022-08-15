@@ -11,9 +11,7 @@ import {
   audio,
   muted,
   mutedBtn,
-  getTimeCodeFromCurrentAudio,
-  getCurrentTimeOfAudio,
-  updateProgressBar,
+  updateTimelineAndTime,
 } from "./audio.js";
 import { createPlayList } from "./playList.js";
 
@@ -31,9 +29,7 @@ document.addEventListener("DOMContentLoaded", getWeather);
 city.addEventListener("keypress", setCity);
 changeQuote.addEventListener("click", getQuotes);
 play.addEventListener("click", playAudio);
-audio.addEventListener("loadeddata", getTimeCodeFromCurrentAudio);
-audio.addEventListener("play", getCurrentTimeOfAudio);
-audio.addEventListener("play", updateProgressBar);
+audio.addEventListener("loadeddata", updateTimelineAndTime);
 audio.addEventListener("ended", playNext);
 document.querySelector(".play-prev").addEventListener("click", playPrev);
 document.querySelector(".play-next").addEventListener("click", playNext);

@@ -125,6 +125,14 @@ const updateProgressBar = () => {
   );
 };
 
+// update timeline and time of audio
+
+const updateTimelineAndTime = () => {
+  updateProgressBar();
+  getCurrentTimeOfAudio();
+  getTimeCodeFromCurrentAudio();
+};
+
 export {
   playAudio,
   play,
@@ -133,8 +141,5 @@ export {
   audio,
   muted,
   mutedBtn,
-  getDurationAudio,
-  getTimeCodeFromCurrentAudio,
-  getCurrentTimeOfAudio,
-  updateProgressBar,
+  updateTimelineAndTime,
 };
