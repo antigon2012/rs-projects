@@ -12,6 +12,9 @@ import {
   muted,
   mutedBtn,
   updateTimelineAndTime,
+  changeVolume,
+  range,
+  timeline,
 } from "./audio.js";
 import { createPlayList } from "./playList.js";
 
@@ -30,6 +33,18 @@ city.addEventListener("keypress", setCity);
 changeQuote.addEventListener("click", getQuotes);
 play.addEventListener("click", playAudio);
 audio.addEventListener("loadeddata", updateTimelineAndTime);
+timeline.addEventListener(
+  "click",
+  (e) => {
+    if (audio.play) {
+      let timeToWidthCoeff = 200 / audio.duration;
+      const timeToSeek = e.offsetX / timeToWidthCoeff;
+      audio.currentTime = timeToSeek;
+    }
+  },
+  false
+);
+range.addEventListener("mousemove", changeVolume);
 audio.addEventListener("ended", playNext);
 document.querySelector(".play-prev").addEventListener("click", playPrev);
 document.querySelector(".play-next").addEventListener("click", playNext);

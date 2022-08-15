@@ -5,12 +5,14 @@ const play = document.querySelector(".play"),
   currentTrack = document.querySelector(".current-track"),
   duration = document.querySelector(".duration"),
   timeline = document.querySelector(".timeline"),
-  progress = document.querySelector(".progress");
+  progress = document.querySelector(".progress"),
+  range = document.querySelector(".sound-volume"),
+  audio = new Audio();
 
-const audio = new Audio();
-
-let isPlay = false;
-let playNum = 0;
+let isPlay = false,
+  playNum = 0,
+  currentTimeOfAudio = 0,
+  currentVolume = 0.5;
 
 // play-pause func
 function playAudio() {
@@ -19,8 +21,9 @@ function playAudio() {
   currentTrack.textContent = `${playNum + 1}. ${playList[playNum].title}`;
 
   if (!isPlay) {
-    audio.currentTime = 0;
+    audio.currentTime = currentTimeOfAudio;
     audio.play();
+    audio.volume = currentVolume;
     changeIcon();
     isPlay = true;
   } else {
@@ -80,11 +83,6 @@ const muted = () => {
   }
 };
 
-// duration audio func
-const getDurationAudio = () => {
-  console.log(audio.duration);
-};
-
 //time code from duration
 const getTimeCodeFromNum = (num) => {
   let seconds = parseInt(num);
@@ -99,9 +97,9 @@ const getTimeCodeFromNum = (num) => {
   ).padStart(2, 0)}`;
 };
 
-// time code from current audio
+// duration audio func
 
-const getTimeCodeFromCurrentAudio = () => {
+const getDurationAudio = () => {
   duration.textContent = getTimeCodeFromNum(audio.duration);
 };
 
@@ -116,13 +114,11 @@ const getCurrentTimeOfAudio = () => {
 
 const updateProgressBar = () => {
   let timeToWidthCoeff = 200 / audio.duration;
-  progress.style.width = `${Math.round(
+  let currentProgress = Math.round(
     parseInt(audio.currentTime) * timeToWidthCoeff
-  )}px`;
-  setTimeout(updateProgressBar, 500);
-  console.log(
-    `${Math.round(parseInt(audio.currentTime) * timeToWidthCoeff)}px`
   );
+  progress.style.width = `${currentProgress}px`;
+  setTimeout(updateProgressBar, 500);
 };
 
 // update timeline and time of audio
@@ -130,7 +126,13 @@ const updateProgressBar = () => {
 const updateTimelineAndTime = () => {
   updateProgressBar();
   getCurrentTimeOfAudio();
-  getTimeCodeFromCurrentAudio();
+  getDurationAudio();
+};
+
+// volume range
+const changeVolume = () => {
+  currentVolume = range.value;
+  audio.volume = currentVolume;
 };
 
 export {
@@ -141,5 +143,9 @@ export {
   audio,
   muted,
   mutedBtn,
+  updateProgressBar,
   updateTimelineAndTime,
+  changeVolume,
+  range,
+  timeline,
 };
