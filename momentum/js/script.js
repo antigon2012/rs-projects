@@ -16,7 +16,7 @@ import {
   range,
   timeline,
 } from "./audio.js";
-import { createPlayList } from "./playList.js";
+import { createPlayList, playList } from "./playList.js";
 
 showTime();
 getQuotes();
@@ -50,8 +50,13 @@ document.querySelector(".play-prev").addEventListener("click", playPrev);
 document.querySelector(".play-next").addEventListener("click", playNext);
 mutedBtn.addEventListener("click", muted);
 
-document.querySelector(".play-list").addEventListener("click", (event) => {
-  if (event.target.classList.contains("play-item")) {
-    console.log(audio.duration);
-  }
+// document.querySelector(".play-list").addEventListener("click", (event) => {
+//   if (event.target.classList.contains("play-item")) {
+//     console.log(event.target.textContent);
+//   }
+// });
+document.querySelectorAll(".play-item").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    console.log(event);
+  });
 });

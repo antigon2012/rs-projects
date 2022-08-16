@@ -1,4 +1,5 @@
 import { city } from "./weather.js";
+import { currentVolume } from "./audio.js";
 export { getLocalStorage, setLocalStorage };
 const name = document.querySelector(".name");
 

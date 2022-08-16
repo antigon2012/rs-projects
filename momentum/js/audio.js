@@ -148,4 +148,5 @@ export {
   changeVolume,
   range,
   timeline,
+  currentVolume,
 };
