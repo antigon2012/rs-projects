@@ -15,6 +15,7 @@ import {
   changeVolume,
   range,
   timeline,
+  clickToPlay,
 } from "./audio.js";
 import { createPlayList, playList } from "./playList.js";
 
@@ -23,6 +24,7 @@ getQuotes();
 setBg();
 getWeather();
 createPlayList();
+clickToPlay();
 
 window.addEventListener("load", getLocalStorage);
 window.addEventListener("beforeunload", setLocalStorage);
@@ -49,14 +51,3 @@ audio.addEventListener("ended", playNext);
 document.querySelector(".play-prev").addEventListener("click", playPrev);
 document.querySelector(".play-next").addEventListener("click", playNext);
 mutedBtn.addEventListener("click", muted);
-
-// document.querySelector(".play-list").addEventListener("click", (event) => {
-//   if (event.target.classList.contains("play-item")) {
-//     console.log(event.target.textContent);
-//   }
-// });
-document.querySelectorAll(".play-item").forEach((el) => {
-  el.addEventListener("click", (event) => {
-    console.log(event);
-  });
-});

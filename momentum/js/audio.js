@@ -27,6 +27,7 @@ function playAudio() {
     changeIcon();
     isPlay = true;
   } else {
+    currentTimeOfAudio = audio.currentTime;
     audio.pause();
     changeIcon();
     isPlay = false;
@@ -135,6 +136,19 @@ const changeVolume = () => {
   audio.volume = currentVolume;
 };
 
+// click to play func
+const clickToPlay = () => {
+  const playItems = document.querySelectorAll(".play-item");
+  playItems.forEach((el) => {
+    el.addEventListener("click", (event) => {
+      let indexOfItem = [...playItems].indexOf(event.target);
+      playNum = indexOfItem;
+      isPlay = false;
+      playAudio();
+    });
+  });
+};
+
 export {
   playAudio,
   play,
@@ -149,4 +163,5 @@ export {
   range,
   timeline,
   currentVolume,
+  clickToPlay,
 };
