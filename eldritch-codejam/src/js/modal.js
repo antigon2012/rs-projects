@@ -1,9 +1,15 @@
 const body = document.body;
+const container = document.querySelector(".container");
+const containerModal = document.createElement("div");
+const modalTitle = document.createElement("h2");
+const modalDescription = document.createElement("p");
+const cardContainer = document.createElement("div");
+const cardAncients = document.querySelectorAll(".card");
 
 const ancients = [
   "Azathoth.jpg",
   "Cthulthu.jpg",
-  "IogSothoth.jpg",
+  "iogSothoth.jpg",
   "ShubNiggurath.jpg",
 ];
 
@@ -13,26 +19,20 @@ function createEldritchCard() {
   const card = new Image();
 
   card.src = `../../assets/Ancients/${ancients[indexOfCard]}`;
-  card.style.cssText = "border-radius: 20px";
+  card.classList.add("card");
+  card.classList.add("active");
+  card.setAttribute("data-ancients", ancients[indexOfCard]);
   return card;
 }
 
 const createGreetingsModal = () => {
-  const containerModal = document.createElement("div");
-  const modalTitle = document.createElement("h2");
-  const modalDescription = document.createElement("p");
-  const cardContainer = document.createElement("div");
-
-  containerModal.style.cssText =
-    "position: absolute; display: flex; flex-direction: column;align-items: center; height: 70%; padding: 15px 25px; background-color: #000; top: 15%; left: 15vw; min-width: 70vw; min-height: 70%; background-color: #000; opacity: 0.8; border-radius: 25px; letter-spacing: 1.2px;";
-  modalTitle.style.cssText =
-    "font-size: 2.5rem; color: #7d12ff; margin-bottom: 15px; text-align: center;";
+  containerModal.classList.add("container-modal");
+  modalTitle.classList.add("modal-title");
+  cardContainer.classList.add("card-container");
+  modalDescription.classList.add("modal-description");
   modalTitle.innerHTML = `Шаноўны гулец,<br> цябе вітае праграма-дапаможнік да гульні "Старажытны жах"!`;
-  modalDescription.style.cssText = "font-size: 1.8rem; font-weight: 900;";
   modalDescription.innerText =
     "Калі ласка, абяры адзін з прапанаваных сцэнароў:";
-  cardContainer.style.cssText =
-    "display: flex; min-height: 50px; gap: 15px; justify-content: center; border-radius: 25px";
 
   containerModal.append(modalTitle);
   containerModal.append(modalDescription);
@@ -41,7 +41,26 @@ const createGreetingsModal = () => {
     indexOfCard = i;
     cardContainer.append(createEldritchCard());
   }
-  body.append(containerModal);
+  container.prepend(containerModal);
 };
 
-export default createGreetingsModal;
+function openModal() {
+  containerModal.classList.add("active");
+  modalTitle.classList.add("active");
+  cardContainer.classList.add("active");
+  modalDescription.classList.add("active");
+  createGreetingsModal();
+}
+
+function closeModal() {
+  containerModal.classList.remove("active");
+  modalTitle.classList.remove("active");
+  cardContainer.classList.remove("active");
+  modalDescription.classList.remove("active");
+  cardAncients.forEach((el) => {
+    console.log(cardAncients);
+    el.classList.remove("active");
+  });
+}
+
+export { openModal, closeModal, indexOfCard, ancients };
