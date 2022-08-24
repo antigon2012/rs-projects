@@ -4,7 +4,6 @@ const containerModal = document.createElement("div");
 const modalTitle = document.createElement("h2");
 const modalDescription = document.createElement("p");
 const cardContainer = document.createElement("div");
-const cardAncients = document.querySelectorAll(".card");
 
 const ancients = [
   "Azathoth.jpg",
@@ -52,15 +51,14 @@ function openModal() {
   createGreetingsModal();
 }
 
-function closeModal() {
+function ancientSriptSelection(element) {
   containerModal.classList.remove("active");
   modalTitle.classList.remove("active");
   cardContainer.classList.remove("active");
   modalDescription.classList.remove("active");
-  cardAncients.forEach((el) => {
-    console.log(cardAncients);
+  element.forEach((el) => {
     el.classList.remove("active");
   });
 }
 
-export { openModal, closeModal, indexOfCard, ancients };
+export { openModal, ancientSriptSelection, indexOfCard, ancients };
