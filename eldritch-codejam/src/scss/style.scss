@@ -1,0 +1,250 @@
+@font-face {
+  font-family: "Abaddon";
+  src: url("../../assets/fonts/Abaddon.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AbaddonCyr";
+  src: url("../../assets/fonts/AbaddonCyr.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ChristmasReignDecoPersonal";
+  src: url("../../assets/fonts/ChristmasReignPERSONAL.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ChristmasReignDecoPersonal";
+  src: url("../../assets/fonts/ChristmasReignPERSONAL.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "ChristmasReignDecoPersonal";
+  font-style: normal;
+  color: #7d12ff;
+}
+
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  background-image: url("../../assets/home.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #000;
+  background-color: #000;
+  opacity: 0.8;
+  border-radius: 25px;
+  letter-spacing: 1.2px;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  color: #7d12ff;
+  margin-bottom: 15px;
+  text-align: center;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.modal-description {
+  font-size: 1.8rem;
+  font-weight: 900;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 50px;
+  gap: 20px;
+  justify-content: center;
+  border-radius: 25px;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.card {
+  border-radius: 20px;
+  transition: 0.2s;
+  visibility: hidden;
+  pointer-events: none;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 9px 5px rgba(125, 18, 255, 0.7);
+  }
+}
+
+.card-deck__wrapper {
+  display: none;
+}
+
+.difficult-level-card {
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 15px 25px;
+  background-color: sandybrown;
+  visibility: hidden;
+  pointer-events: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 9px 5px rgba(125, 18, 255, 0.7);
+  }
+  &[data-value="Карт засталося:"] {
+    font-family: "Abaddon";
+    font-style: normal;
+  }
+}
+
+.go-play-card {
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 15px 25px;
+  background-color: burlywood;
+  visibility: hidden;
+  pointer-events: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 9px 5px rgba(125, 18, 255, 0.7);
+  }
+}
+
+.wrapper-ancient {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.container-of-deck-of-myths {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  width: 500px;
+  height: 350px;
+  background-color: burlywood;
+  border: 5px solid rgba(125, 18, 255, 0.7);
+  border-radius: 20px;
+  color: #000;
+}
+
+.container-title {
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.flex-row {
+  display: flex;
+  width: 450px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.row-title {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid #7d12ff;
+  &:nth-child(2) {
+    background-color: green;
+  }
+  &:nth-child(3) {
+    background-color: sandybrown;
+  }
+  &:last-child {
+    background-color: blue;
+  }
+}
+
+.deck-of-cards-container {
+  position: absolute;
+  bottom: 35%;
+  left: calc(50% - 20vw);
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+  width: 40vw;
+}
+
+.card-shirt-background {
+  width: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  border: 2px solid sandybrown;
+}
+
+.card-face {
+  width: 350px;
+  height: 515px;
+  background-image: url("../../assets/mythicCardBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  border: 2px solid sandybrown;
+}
+
+.active {
+  visibility: visible;
+  pointer-events: all;
+}

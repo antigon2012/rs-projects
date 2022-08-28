@@ -1,0 +1,325 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Abaddon";
+  src: url("../../assets/fonts/Abaddon.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AbaddonCyr";
+  src: url("../../assets/fonts/AbaddonCyr.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ChristmasReignDecoPersonal";
+  src: url("../../assets/fonts/ChristmasReignPERSONAL.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ChristmasReignDecoPersonal";
+  src: url("../../assets/fonts/ChristmasReignPERSONAL.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "ChristmasReignDecoPersonal";
+  font-style: normal;
+  color: #7d12ff;
+}
+
+.container {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  background-image: url("../../assets/home.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 25px;
+  background-color: #000;
+  background-color: #000;
+  opacity: 0.8;
+  border-radius: 25px;
+  letter-spacing: 1.2px;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  color: #7d12ff;
+  margin-bottom: 15px;
+  text-align: center;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.modal-description {
+  font-size: 1.8rem;
+  font-weight: 900;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 50px;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 25px;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card {
+  border-radius: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0px 0px 9px 5px rgba(125, 18, 255, 0.7);
+          box-shadow: 0px 0px 9px 5px rgba(125, 18, 255, 0.7);
+}
+
+.card-deck__wrapper {
+  display: none;
+}
+
+.difficult-level-card {
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 15px 25px;
+  background-color: sandybrown;
+  visibility: hidden;
+  pointer-events: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.difficult-level-card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0px 0px 9px 5px rgba(125, 18, 255, 0.7);
+          box-shadow: 0px 0px 9px 5px rgba(125, 18, 255, 0.7);
+}
+
+.difficult-level-card[data-value="Карт засталося:"] {
+  font-family: "Abaddon";
+  font-style: normal;
+}
+
+.go-play-card {
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 15px 25px;
+  background-color: burlywood;
+  visibility: hidden;
+  pointer-events: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.go-play-card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0px 0px 9px 5px rgba(125, 18, 255, 0.7);
+          box-shadow: 0px 0px 9px 5px rgba(125, 18, 255, 0.7);
+}
+
+.wrapper-ancient {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-of-deck-of-myths {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 25px;
+  width: 500px;
+  height: 350px;
+  background-color: burlywood;
+  border: 5px solid rgba(125, 18, 255, 0.7);
+  border-radius: 20px;
+  color: #000;
+}
+
+.container-title {
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.sub-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 450px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.row-title {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid #7d12ff;
+}
+
+.cell:nth-child(2) {
+  background-color: green;
+}
+
+.cell:nth-child(3) {
+  background-color: sandybrown;
+}
+
+.cell:last-child {
+  background-color: blue;
+}
+
+.deck-of-cards-container {
+  position: absolute;
+  bottom: 35%;
+  left: calc(50% - 20vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 40vw;
+}
+
+.card-shirt-background {
+  width: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  border: 2px solid sandybrown;
+}
+
+.card-face {
+  width: 350px;
+  height: 515px;
+  background-image: url("../../assets/mythicCardBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  border: 2px solid sandybrown;
+}
+
+.active {
+  visibility: visible;
+  pointer-events: all;
+}
