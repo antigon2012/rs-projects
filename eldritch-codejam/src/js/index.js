@@ -79,7 +79,7 @@ document.querySelector(".card-container").addEventListener("click", (e) => {
 
     wrapperAncient.append(createDifficultField(`Карт засталося:`));
     container.append(wrapperAncient);
-    container.append(createCheckfieldDeckOfMyths());
+    container.append(createCheckfieldDeckOfMyths(ancientCard));
     container.append(createDeckButton());
   }
 });
@@ -89,8 +89,9 @@ let cardFace = document.querySelector(".card-face");
 container.addEventListener("click", (e) => {
   if (e.target.classList.contains("card-shirt-background")) {
     let dataValue = document.querySelector("[data-value = 'Карт засталося:']");
-    console.log(deckOfPlay.pop());
+    dataValue.textContent = `Карт засталося: ${deckOfPlay.length}`;
 
+    console.log(deckOfPlay);
     if (deckOfPlay.length > 0) {
       document.querySelector(".card-face").style.backgroundImage = `url('${
         deckOfPlay.pop().cardFace

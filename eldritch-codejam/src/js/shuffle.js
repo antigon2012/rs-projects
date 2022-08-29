@@ -106,7 +106,6 @@ function createGeneralDeck(value) {
 
 function createDeckByStage(ancientObj) {
   let { firstStage, secondStage, thirdStage } = ancientObj;
-
   function spliceToStage(stage) {
     return [
       ...deckOfGreen.splice(0, stage.greenCards),
@@ -125,12 +124,9 @@ function createDeckByStage(ancientObj) {
 function createArrayByEasyHardDifficulty(arr, diff, countOfCards) {
   let resArr = [];
 
-  const arrSort = [...arr].sort((a, b) => {
-    if (a.difficulty < b.difficulty) return -1;
-    return 1;
-  });
+  const arrCopy = [...arr];
 
-  let arrFilteredByDiff = arrSort.filter((el) => {
+  let arrFilteredByDiff = arrCopy.filter((el) => {
     if (el.difficulty === diff) {
       return el;
     }
@@ -138,7 +134,13 @@ function createArrayByEasyHardDifficulty(arr, diff, countOfCards) {
 
   if (arrFilteredByDiff.length < countOfCards) {
     resArr = arrFilteredByDiff.concat(
-      arrSort.slice(arrFilteredByDiff.length - countOfCards)
+      arrCopy
+        .filter((el) => {
+          if (el.difficulty === "normal") {
+            return el;
+          }
+        })
+        .slice(arrFilteredByDiff.length - countOfCards)
     );
   } else {
     resArr = [...arrFilteredByDiff.slice(0, countOfCards)];
@@ -148,15 +150,13 @@ function createArrayByEasyHardDifficulty(arr, diff, countOfCards) {
 }
 
 function createSubEasyHardDeck(arr, diff, countOfCards) {
-  return shuffle(
-    arr
-      .filter((el) => {
-        if (el.difficulty !== diff) {
-          return el;
-        }
-      })
-      .slice(-countOfCards)
-  );
+  return arr
+    .filter((el) => {
+      if (el.difficulty !== diff) {
+        return el;
+      }
+    })
+    .slice(-countOfCards);
 }
 
 function searchCurrentAncientsObject(value) {

@@ -11,7 +11,9 @@ function createDifficultField(value) {
   return div;
 }
 
-function createCheckfieldDeckOfMyths(array) {
+function createCheckfieldDeckOfMyths(obj) {
+  let { firstStage, secondStage, thirdStage } = obj;
+
   const container = document.createElement("div"),
     containerTitle = document.createElement("h2"),
     subContainer = document.createElement("div"),
@@ -34,24 +36,33 @@ function createCheckfieldDeckOfMyths(array) {
   rowTitle2.classList.add("row-title");
   cell.classList.add("cell");
 
-  containerTitle.textContent = "Калода міфаў";
+  const cellgreen1 = cell.cloneNode(),
+    cellgreen2 = cell.cloneNode(),
+    cellgreen3 = cell.cloneNode(),
+    cellgreen4 = cell.cloneNode(),
+    cellgreen5 = cell.cloneNode(),
+    cellgreen6 = cell.cloneNode(),
+    cellgreen7 = cell.cloneNode(),
+    cellgreen8 = cell.cloneNode(),
+    cellgreen9 = cell.cloneNode();
+
+  (cellgreen1.textContent = firstStage.greenCards),
+    (cellgreen2.textContent = firstStage.brownCards),
+    (cellgreen3.textContent = firstStage.blueCards),
+    (cellgreen4.textContent = secondStage.greenCards),
+    (cellgreen5.textContent = secondStage.brownCards),
+    (cellgreen6.textContent = secondStage.blueCards),
+    (cellgreen7.textContent = thirdStage.greenCards),
+    (cellgreen8.textContent = thirdStage.brownCards),
+    (cellgreen9.textContent = thirdStage.blueCards),
+    (containerTitle.textContent = "Калода міфаў");
   rowTitle.textContent = "Эпізод I";
   rowTitle1.textContent = "Эпізод II";
   rowTitle2.textContent = "Эпізод III";
 
-  flexRow.prepend(rowTitle, cell, cell.cloneNode(), cell.cloneNode());
-  flexRow1.append(
-    rowTitle1,
-    cell.cloneNode(),
-    cell.cloneNode(),
-    cell.cloneNode()
-  );
-  flexRow2.append(
-    rowTitle2,
-    cell.cloneNode(),
-    cell.cloneNode(),
-    cell.cloneNode()
-  );
+  flexRow.prepend(rowTitle, cellgreen1, cellgreen2, cellgreen3);
+  flexRow1.append(rowTitle1, cellgreen4, cellgreen5, cellgreen6);
+  flexRow2.append(rowTitle2, cellgreen7, cellgreen8, cellgreen9);
   subContainer.append(flexRow, flexRow1, flexRow2);
   rowTitle.cloneNode();
   container.append(containerTitle, subContainer);
