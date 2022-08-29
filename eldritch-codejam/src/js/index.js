@@ -20,6 +20,7 @@ import {
   createDifficultField,
   createCheckfieldDeckOfMyths,
   createDeckButton,
+  counter,
 } from "./playMode.js";
 
 const container = document.querySelector(".container");
@@ -81,6 +82,7 @@ document.querySelector(".card-container").addEventListener("click", (e) => {
     container.append(wrapperAncient);
     container.append(createCheckfieldDeckOfMyths(ancientCard));
     container.append(createDeckButton());
+    console.log(deckOfPlay);
   }
 });
 
@@ -88,16 +90,39 @@ let cardFace = document.querySelector(".card-face");
 
 container.addEventListener("click", (e) => {
   if (e.target.classList.contains("card-shirt-background")) {
-    let dataValue = document.querySelector("[data-value = 'Карт засталося:']");
-    dataValue.textContent = `Карт засталося: ${deckOfPlay.length}`;
+    let dataValue = document.querySelector("[data-value = 'Карт засталося:']"),
+      flexRow = document.querySelectorAll(".flex-row"),
+      countButton = 0;
 
-    console.log(deckOfPlay);
-    if (deckOfPlay.length > 0) {
-      document.querySelector(".card-face").style.backgroundImage = `url('${
-        deckOfPlay.pop().cardFace
-      }')`;
-      dataValue.textContent = `Карт засталося: ${deckOfPlay.length}`;
+    // Стартавае значэнне countButton
+    for (let i = 0; i < deckOfPlay.length; i++) {
+      countButton += deckOfPlay[i].length;
     }
+    dataValue.textContent = `Карт засталося: ${countButton}`;
+
+    console.log((flexRow[2].childNodes[2].textContent -= 1));
+    let popEl;
+    if (deckOfPlay[deckOfPlay.length - 1].length > 0) {
+      popEl = deckOfPlay[deckOfPlay.length - 1].pop();
+      // counter(
+      //   flexRow,
+      //   0,
+      //   popEl.color,
+      //   deckOfPlay[deckOfPlay.length - 1].length
+      // );
+      console.log(popEl.color);
+      countButton = countButton - 1;
+      dataValue.textContent = `Карт засталося: ${countButton}`;
+    } else {
+      deckOfPlay.pop();
+      popEl = deckOfPlay[deckOfPlay.length - 1].pop();
+      countButton = countButton - 1;
+      dataValue.textContent = `Карт засталося: ${countButton}`;
+    }
+
+    document.querySelector(
+      ".card-face"
+    ).style.backgroundImage = `url('${popEl.cardFace}')`;
   }
 });
 

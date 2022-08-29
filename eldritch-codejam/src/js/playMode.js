@@ -70,12 +70,23 @@ function createCheckfieldDeckOfMyths(obj) {
   return container;
 }
 
-function counter(array) {
-  arr.forEach((el) => {
-    if (el.color === "green") {
-      cell.innerText = 1;
+function counter(array, index, value, controlSum) {
+  if (controlSum) {
+    switch (value) {
+      case "green":
+        array[index].childNodes[1].textContent -= 1;
+        break;
+      case "brown":
+        array[index].childNodes[2].textContent -= 1;
+        break;
+      case "blue":
+        array[index].childNodes[3].textContent -= 1;
+        break;
     }
-  });
+  } else {
+    counter(array, index + 1, value);
+  }
+  array[index].childNodes;
 }
 
 function createDeckButton() {
@@ -93,4 +104,9 @@ function createDeckButton() {
   return container;
 }
 
-export { createDifficultField, createCheckfieldDeckOfMyths, createDeckButton };
+export {
+  createDifficultField,
+  createCheckfieldDeckOfMyths,
+  createDeckButton,
+  counter,
+};

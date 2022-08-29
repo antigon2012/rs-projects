@@ -118,7 +118,7 @@ function createDeckByStage(ancientObj) {
   secondStageDeck = [...shuffle(spliceToStage(secondStage))];
   thirdStageDeck = [...shuffle(spliceToStage(thirdStage))];
   console.log(firstStageDeck, secondStageDeck, thirdStageDeck);
-  return [...thirdStageDeck, ...secondStageDeck, ...firstStageDeck];
+  return [thirdStageDeck, secondStageDeck, firstStageDeck];
 }
 
 function createArrayByEasyHardDifficulty(arr, diff, countOfCards) {
