@@ -101,7 +101,7 @@ body {
   transition: 0.2s;
   visibility: hidden;
   pointer-events: none;
-  width: 350px;
+  width: 250px;
 
   &:hover {
     transform: scale(1.02);
@@ -229,7 +229,8 @@ body {
 }
 
 .card-shirt-background {
-  width: 285px;
+  width: 180px;
+  height: 265px;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -237,8 +238,8 @@ body {
 }
 
 .card-face {
-  width: 285px;
-  height: 419px;
+  width: 200px;
+  height: 265px;
   background-image: url("../../assets/mythicCardBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
