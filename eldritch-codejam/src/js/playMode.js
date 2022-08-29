@@ -70,23 +70,45 @@ function createCheckfieldDeckOfMyths(obj) {
   return container;
 }
 
-function counter(array, index, value, controlSum) {
-  if (controlSum) {
+function counter(array, value, controlSum) {
+  if (controlSum === 3) {
     switch (value) {
       case "green":
-        array[index].childNodes[1].textContent -= 1;
+        array[0].childNodes[1].textContent -= 1;
         break;
       case "brown":
-        array[index].childNodes[2].textContent -= 1;
+        array[0].childNodes[2].textContent -= 1;
         break;
       case "blue":
-        array[index].childNodes[3].textContent -= 1;
+        array[0].childNodes[3].textContent -= 1;
         break;
     }
-  } else {
-    counter(array, index + 1, value);
+  } else if (controlSum === 2) {
+    switch (value) {
+      case "green":
+        array[1].childNodes[1].textContent -= 1;
+        break;
+      case "brown":
+        array[1].childNodes[2].textContent -= 1;
+        break;
+      case "blue":
+        array[1].childNodes[3].textContent -= 1;
+        break;
+    }
+  } else if (controlSum === 1) {
+    switch (value) {
+      case "green":
+        array[2].childNodes[1].textContent -= 1;
+        break;
+      case "brown":
+        array[2].childNodes[2].textContent -= 1;
+        break;
+      case "blue":
+        array[2].childNodes[3].textContent -= 1;
+        break;
+    }
   }
-  array[index].childNodes;
+  // array[index].childNodes;
 }
 
 function createDeckButton() {

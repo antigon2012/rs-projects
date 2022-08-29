@@ -100,16 +100,11 @@ container.addEventListener("click", (e) => {
     }
     dataValue.textContent = `Карт засталося: ${countButton}`;
 
-    console.log((flexRow[2].childNodes[2].textContent -= 1));
+    // console.log((flexRow[2].childNodes[2].textContent -= 1));
+
     let popEl;
     if (deckOfPlay[deckOfPlay.length - 1].length > 0) {
       popEl = deckOfPlay[deckOfPlay.length - 1].pop();
-      // counter(
-      //   flexRow,
-      //   0,
-      //   popEl.color,
-      //   deckOfPlay[deckOfPlay.length - 1].length
-      // );
       console.log(popEl.color);
       countButton = countButton - 1;
       dataValue.textContent = `Карт засталося: ${countButton}`;
@@ -119,6 +114,7 @@ container.addEventListener("click", (e) => {
       countButton = countButton - 1;
       dataValue.textContent = `Карт засталося: ${countButton}`;
     }
+    counter(flexRow, popEl.color, deckOfPlay.length);
 
     document.querySelector(
       ".card-face"
