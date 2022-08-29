@@ -115,9 +115,9 @@ function createDeckByStage(ancientObj) {
     ];
   }
 
-  firstStageDeck.push(...shuffle(spliceToStage(firstStage)));
-  secondStageDeck.push(...shuffle(spliceToStage(secondStage)));
-  thirdStageDeck.push(...shuffle(spliceToStage(thirdStage)));
+  firstStageDeck = [...shuffle(spliceToStage(firstStage))];
+  secondStageDeck = [...shuffle(spliceToStage(secondStage))];
+  thirdStageDeck = [...shuffle(spliceToStage(thirdStage))];
   console.log(firstStageDeck, secondStageDeck, thirdStageDeck);
   return [...thirdStageDeck, ...secondStageDeck, ...firstStageDeck];
 }
