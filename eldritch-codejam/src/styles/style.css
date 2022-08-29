@@ -224,8 +224,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px 25px;
-  width: 500px;
-  height: 350px;
+  width: 400px;
+  height: 250px;
   background-color: burlywood;
   border: 5px solid rgba(125, 18, 255, 0.7);
   border-radius: 20px;
@@ -235,7 +235,7 @@ body {
 .container-title {
   padding: 0;
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .sub-container {
@@ -249,30 +249,32 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 40px;
+  gap: 25px;
 }
 
 .flex-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 450px;
+  width: 350px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  gap: 43px;
 }
 
 .row-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0;
   margin: 0;
 }
 
 .cell {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   border: 2px solid #7d12ff;
 }

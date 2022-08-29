@@ -168,8 +168,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  width: 500px;
-  height: 350px;
+  width: 400px;
+  height: 250px;
   background-color: burlywood;
   border: 5px solid rgba(125, 18, 255, 0.7);
   border-radius: 20px;
@@ -179,32 +179,33 @@ body {
 .container-title {
   padding: 0;
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .sub-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 40px;
+  gap: 25px;
 }
 
 .flex-row {
   display: flex;
-  width: 450px;
+  width: 350px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: right;
+  gap: 43px;
 }
 
 .row-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0;
   margin: 0;
 }
 
 .cell {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   border: 2px solid #7d12ff;
   &:nth-child(2) {
